@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <% include ../world/header/links %>
+</head>
+
+<body>
+
+    <% include ../world/header/header %>
+
+    <section class="ftco-intro ftco-no-pb img" style="background-image: url(images/bg_3.jpg);">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-10 text-center heading-section heading-section-white ftco-animate">
+					<h2 class="mb-0">Servicios</h2>
+				</div>
+			</div>
+		</div>
+    </section>
+
+    <section class="ftco-section ftco-no-pt">
+        <div class="container">
+            <div class="row tabulation mt-4 ftco-animate">
+                <div class="col-md-4">
+                    <ul class="nav nav-pills nav-fill d-md-flex d-block flex-column">
+                        <li class="nav-item text-left">
+                            <a class="<%= tema == 'contabilidad' ? 'nav-link active py-4' : 'nav-link py-4' %>" data-toggle="tab" href="#services-1"><span
+                                    class="flaticon-insurance mr-2"></span> Contabilidad</a>
+                        </li>
+                        <li class="nav-item text-left">
+                            <a class="<%= tema == 'tributacion' ? 'nav-link active py-4' : 'nav-link py-4' %>" data-toggle="tab" href="#services-2"><span
+                                    class="flaticon-search-engine mr-2"></span> Tributación</a>
+                        </li>
+                        <li class="nav-item text-left">
+                            <a class="<%= tema == 'laboral' ? 'nav-link active py-4' : 'nav-link py-4' %>" data-toggle="tab" href="#services-3"><span
+                                    class="flaticon-analysis mr-2"></span> Laboral</a>
+                        </li>
+                        <li class="nav-item text-left">
+                            <a class="<%= tema == 'municipio' ? 'nav-link active py-4' : 'nav-link py-4' %>" data-toggle="tab" href="#services-4"><span
+                                    class="flaticon-money mr-2"></span> Municipio y otras entidades de control</a>
+                        </li>
+                        <li class="nav-item text-left">
+                            <a class="<%= tema == 'capacitacion' ? 'nav-link active py-4' : 'nav-link py-4' %>" data-toggle="tab" href="#services-5"><span
+                                    class="flaticon-rating mr-2"></span> Capacitación</a>
+                        </li>
+                        <li class="nav-item text-left">
+                            <a class="<%= tema == 'asesoria' ? 'nav-link active py-4' : 'nav-link py-4' %>" data-toggle="tab" href="#services-6"><span
+                                    class="flaticon-business mr-2"></span> Asesoría</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-8">
+                    <div class="tab-content">
+                        <div class="<%= tema == 'contabilidad' ? 'tab-pane container p-0 active' : 'tab-pane container p-0 fade' %>" id="services-1">
+                            <div class="img" style="background-image: url(images/project-2.jpg);"></div>
+                            <h3><a>Contabilidad</a></h3>
+                            <p>
+                            <ul>
+                                <li>Contabilidad personas naturales y jurídicas</li>
+                                <li>Procesos de Implementación del Sistema Contable</li>
+                                <li>Outsourcing Contable</li>
+                                <li>Elaboración de Estados Financieros</li>
+                                <li>Revisión y Depuración de información para los procesos contables</li>
+                                <li>Implementación de Software contable de acuerdo a la necesidad</li>
+                                <li>Sistema de facturación electrónica</li>
+                                <li>Supervisión y Asesoría</li>
+                            </ul>
+                            </p>
+                        </div>
+                        <div class="<%= tema == 'tributacion' ? 'tab-pane container p-0 active' : 'tab-pane container p-0 fade' %>" id="services-2">
+                            <div class="img" style="background-image: url(images/project-3.jpg);"></div>
+                            <h3><a>Tributación</a></h3>
+                            <p>
+                            <ul>
+                                <li>Diagnóstico Tributario</li>
+                                <li>Planificación tributaria</li>
+                                <li>Auditorias tributarias preventivas</li>
+                                <li>Fiscalizadores de impuestos mensuales, 104, 103, ATS</li>
+                                <li>
+                                    Devoluciones de Impuestos Fiscales (Iva; Renta) y su respectivo trámite ante el
+                                    servicio de Rentas Internas
+                                </li>
+                                <li>Declaración Patrimonial</li>
+                                <li>Proyección de impuesto a la Renta</li>
+                                <li>Asesoría Tributaria permanente</li>
+                            </ul>
+                            </p>
+                        </div>
+                        <div class="<%= tema == 'laboral' ? 'tab-pane container p-0 active' : 'tab-pane container p-0 fade' %>" id="services-3">
+                            <div class="img" style="background-image: url(images/project-4.jpg);"></div>
+                            <h3><a>Laboral</a></h3>
+                            <p>
+                            <ul>
+                                <li>Manejo de Nomina, roles de pago individuales</li>
+                                <li>Manejo página IESS</li>
+                                <li>Manejo página Ministerio de Relaciones Laborales</li>
+                            </ul>
+                            </p>
+                        </div>
+                        <div class="<%= tema == 'municipio' ? 'tab-pane container p-0 active' : 'tab-pane container p-0 fade' %>" id="services-4">
+                            <div class="img" style="background-image: url(images/project-5.jpg);"></div>
+                            <h3><a>Municipio y otras entidades de control</a></h3>
+                            <p>
+                            <ul>
+                                <li>Tramites permisos de funcionamiento L.U.A.E.</li>
+                                <li>Declaración de patentes, 1.5 x mil</li>
+                            </ul>
+                            </p>
+                        </div>
+                        <div class="<%= tema == 'capacitacion' ? 'tab-pane container p-0 active' : 'tab-pane container p-0 fade' %>" id="services-5">
+                            <div class="img" style="background-image: url(images/project-6.jpg);"></div>
+                            <h3><a>Capacitación</a></h3>
+                            <p>
+                            <ul>
+                                <li>Capacitación localizada</li>
+                                <li>Cursos de: Aprendiendo tributación en sus diferentes etapas</li>
+                                <li>Cursos de: Devolución de impuestos</li>
+                                <li>Curso de Manejo de Balances, y sus respectivos ajustes</li>
+                            </ul>
+                            </p>
+                        </div>
+                        <div class="<%= tema == 'asesoria' ? 'tab-pane container p-0 active' : 'tab-pane container p-0 fade' %>" id="services-6">
+                            <div class="img" style="background-image: url(images/project-1.jpg);"></div>
+                            <h3><a>Asesoría</a></h3>
+                            <p>
+                            <ul>
+                                <li>Creación y organización de empresas</li>
+                                <li>Acompañamiento facturación electrónica, sistemas</li>
+                                <li>Servicios, Informes Actuariales, con el personal calificado en el área</li>
+                                <li>Servicio, de Revaluación de Activos fijos con Peritos calificados por la
+                                    Superintendencia de Compañías</li>
+                                <li>Auditorías externas, de acuerdo a requerimientos de la Superintendencia de
+                                    compañías, por total de Activos y Empresas de interés público</li>
+                            </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ftco-intro ftco-no-pb img" style="background-image: url(images/bg_1.jpg);">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-10 text-center heading-section heading-section-white ftco-animate">
+                    <h2 class="mb-0">Siempre obtienes la mejor orientación</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ftco-section testimony-section">
+        <div class="container-fluid px-md-5">
+            <a name="contacto"></a>
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-8 text-center heading-section ftco-animate">
+                    <h2 class="mb-4">Contacto</h2>
+                </div>
+            </div>
+            <div class="row ftco-animate justify-content-center">
+                <div class="col-md-12">
+
+                    <div class="container">
+                        <div class="row d-flex mb-5 contact-info justify-content-center" style="color: black;">
+                            <div class="col-md-10">
+                                <div class="row mb-5">
+                                    <div class="col-md-4 text-center d-flex">
+                                        <div class="border w-100 p-4">
+                                            <div class="icon">
+                                                <span class="icon-map-o"
+                                                    style="font-size: 30px; color: #13683B;"></span>
+                                            </div>
+                                            <p><span style="font-size: 18px;"><b>Dirección:</b></span><br>Jorge
+                                                Washington
+                                                E4-59 y Amazonas Edif.
+                                                Rocafuerte, Of. 5, sector C.C.Espiral
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 text-center d-flex">
+                                        <div class="border w-100 p-4">
+                                            <div class="icon">
+                                                <span class="icon-tablet"
+                                                    style="font-size: 30px; color: #13683B"></span>
+                                            </div>
+                                            <p><span style="font-size: 18px;"><b>Teléfono:</b></span><br>+593 997607812
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 text-center d-flex">
+                                        <div class="border w-100 p-4">
+                                            <div class="icon">
+                                                <span class="icon-envelope-o"
+                                                    style="font-size: 30px; color: #13683B"></span>
+                                            </div>
+                                            <p><span style="font-size: 18px;"><b>Correo Electrónico:</b></span><br>
+                                                info@adcontur.com</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row block-9 justify-content-center mb-5">
+                            <div class="col-md-10 mb-md-5">
+                                <br>
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.792600168622!2d-78.49863834909598!3d-0.2057302998491574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d59bc4d315f6ab%3A0x910d049c327ce1aa!2sAdcontur%20Soluciones%20Integrales!5e0!3m2!1ses-419!2sec!4v1585854670396!5m2!1ses-419!2sec"
+                                    style="width: 100%; height: 600px;" frameborder="0" style="border:0;"
+                                    allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <% include ../world/footer/footer %>
+
+    <% include ../world/footer/links %>
+
+    <% include ../world/footer/float %>
+</body>
+
+</html>

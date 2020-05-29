@@ -9972,3 +9972,58 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+
+    .clase a {
+			text-decoration: none;
+		}
+
+		.clase ul {
+			list-style: none;
+			margin: 0;
+			padding-left: 0;
+		}
+
+		.clase li {
+			color: #fff;
+			display: block;
+			float: left;
+			position: relative;
+			text-decoration: none;
+			transition-duration: 0.5s;
+		}
+
+		.clase li a {
+			color: #fff;
+		}
+
+		.clase li:hover {
+			background: #1c442e;
+			cursor: pointer;
+		}
+
+		ul li ul {
+			visibility: hidden;
+			opacity: 0;
+			position: absolute;
+			transition: all 0.5s ease;
+			margin-top: 8px;
+			left: 0;
+			display: none;
+		}
+
+		ul li:hover>ul,
+		ul li ul:hover {
+			visibility: visible;
+			opacity: 1;
+			display: block;
+		}
+
+		ul li ul li {
+			clear: both;
+			width: 100%;
+			padding-left: 30px !important;
+			padding-right: 30px !important;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			font-size: 14px !important;
+		}
