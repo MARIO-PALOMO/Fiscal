@@ -5,15 +5,16 @@
     <% include ../world/header/links %>
 </head>
 
-<body>
+<body ondragstart="return false" onselectstart="return false" oncontextmenu="return false">
 
     <% include ../world/header/header %>
 
-    <section class="ftco-intro ftco-no-pb img" style="background-image: url(images/bg_3.jpg);">
+    <section class="ftco-intro ftco-no-pb img"
+        style="background-image: url(images/bg_3.jpg); padding: 10px !important;">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-10 text-center heading-section heading-section-white ftco-animate">
-                    <h2 class="mb-0">Detalle Publicacion</h2>
+                    <h2 class="mb-0">Tema de Interés</h2>
                 </div>
             </div>
         </div>
@@ -25,13 +26,12 @@
             <div class="row">
                 <div class="col-md-12 text-center">
                     <div class="row">
-                        <div class="col-md-9 wrap-about ftco-animate py-md-5 pl-md-5 fadeInUp ftco-animated">
+                        <div id="imprimible"
+                            class="col-md-9 wrap-about ftco-animate py-md-5 pl-md-5 fadeInUp ftco-animated">
                             <div style="text-align: left !important;" class="heading-section mb-4">
                                 <h2>WEBINAR - BUENAS PRÁCTICAS CONTABLES EN TIEMPOS DE CRISIS</h2>
                             </div>
-                            <p style="text-align: left;">
-                                29 mayo 2020
-                            </p>
+
                             <p style="text-align: left;">
                                 NOTICIA
                             </p>
@@ -70,15 +70,18 @@
                                     <b>COMPARTIR</b>
                                 </p>
                                 <p class="social mb-0">
-                                    <a href="#" target="_blank"><i
-                                            class="ion-logo-facebook" style="font-size: 30px;"></i><span
-                                            class="sr-only">Facebook</span></a> &nbsp;&nbsp;
-                                    <a href="#" style="font-size: 30px;"
-                                        target="_blank"><i class="ion-logo-twitter"></i><span
-                                            class="sr-only">Twitter</span></a> &nbsp;&nbsp;
-                                    <a href="#" style="font-size: 30px;"
-                                        target="_blank"><i class="ion-logo-instagram"></i><span
-                                            class="sr-only">Instagram</span></a> &nbsp;&nbsp;
+                                    <a href="#" target="_blank"><i class="ion-logo-facebook"
+                                            style="font-size: 30px;"></i><span class="sr-only">Facebook</span></a>
+                                    &nbsp;&nbsp;
+                                    <a href="#" style="font-size: 30px;" target="_blank"><i
+                                            class="ion-logo-twitter"></i><span class="sr-only">Twitter</span></a>
+                                    &nbsp;&nbsp;
+                                    <a href="#" style="font-size: 30px;" target="_blank"><i
+                                            class="ion-logo-instagram"></i><span class="sr-only">Instagram</span></a>
+                                    &nbsp;&nbsp;
+                                    <a style="cursor: pointer;"id="btnImprimirParrafo" style="font-size: 30px;" target="_blank"><img
+                                            src="images/printer.png" alt="Imprimir" width="22.5"></a>
+                                    &nbsp;&nbsp;
                                 </p>
                             </div>
 
@@ -91,7 +94,8 @@
         </div>
     </section>
 
-    <section class="ftco-intro ftco-no-pb img" style="background-image: url(images/bg_1.jpg);">
+    <section class="ftco-intro ftco-no-pb img"
+        style="background-image: url(images/bg_1.jpg); padding: 10px !important;">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-10 text-center heading-section heading-section-white ftco-animate">
@@ -173,6 +177,27 @@
     <% include ../world/footer/links %>
 
     <% include ../world/footer/float %>
+
+    <script>
+        function imprimirElemento(elemento) {
+            var ventana = window.open('', 'PRINT', 'height=800,width=1000');
+            ventana.document.write('<html><head><title>' + document.title + '</title>');
+            ventana.document.write('</head><body >');
+            ventana.document.write(elemento.innerHTML);
+            ventana.document.write('</body></html>');
+            ventana.document.close();
+            ventana.focus();
+            ventana.print();
+            ventana.close();
+            return true;
+        }
+
+        $("#btnImprimirParrafo").click(function () {
+            var div = document.querySelector("#imprimible");
+            imprimirElemento(div);
+        });
+
+    </script>
 
 </body>
 

@@ -59,14 +59,23 @@
         width: 100%;
       }
     }
+
+    .popover {
+      background: #333;
+      color: white;
+      padding: 4px 8px;
+      font-size: 13px;
+      border-radius: 4px;
+    }
   </style>
+
 </head>
 
 <body>
 
   <% include ../world/header/header %>
 
-  <section class="ftco-intro ftco-no-pb img" style="background-image: url(images/bg_3.jpg);">
+  <section class="ftco-intro ftco-no-pb img" style="background-image: url(images/bg_3.jpg); padding: 10px !important;">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-md-10 text-center heading-section heading-section-white ftco-animate">
@@ -76,7 +85,7 @@
     </div>
   </section>
 
-  <section class="ftco-section testimony-section">
+  <section class="ftco-section testimony-section" style="padding-top: 30px !important;">
     <div class="container-fluid px-md-5">
       <div class="row ftco-animate justify-content-center fadeInUp ftco-animated">
         <div class="col-md-12">
@@ -84,6 +93,154 @@
             <div class="row block-9 justify-content-center mb-5">
               <div class="col-md-8">
                 <div class="tabulation-2 mt-4 accordion" id="accordionExample">
+
+                  <div class="card">
+                    <div class="card-header" id="headingTree"
+                      style="background-color: #13683B; color: #fff; font-size: 15px;" data-toggle="collapse"
+                      data-target="#headingTree" aria-expanded="false" aria-controls="headingTree">
+                      Servicios
+                    </div>
+                    <div id="headingTree" class="collapse show" aria-labelledby="headingTree"
+                      data-parent="#accordionExample">
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-md-12">
+                            <hr>
+                          </div>
+                          <div class="col-md-6">
+
+                            <b data-toggle="collapse" data-target="#sri" style="cursor: pointer;"
+                              aria-describedby="tooltip">Servicios SRI
+                            </b>
+
+                            <hr>
+                            <div id="sri" class="collapse">
+                              <ul style="cursor: pointer;">
+                                <li>Complemento 1</li>
+                                <li>Complemento 2</li>
+                                <li>Complemento 3</li>
+                                <li>Complemento 4</li>
+                                <li>Complemento 5</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <b data-toggle="collapse" data-target="#iess" style="cursor: pointer;">Servicios IESS</b>
+                            <hr>
+                            <div id="iess" class="collapse">
+                              <ul style="cursor: pointer;">
+                                <li>Complemento 1</li>
+                                <li>Complemento 2</li>
+                                <li>Complemento 3</li>
+                                <li>Complemento 4</li>
+                                <li>Complemento 5</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <b data-toggle="collapse" data-target="#mrl" style="cursor: pointer;">Servicios MRL</b>
+                            <hr>
+                            <div id="mrl" class="collapse">
+                              <ul style="cursor: pointer;">
+                                <li>Complemento 1</li>
+                                <li>Complemento 2</li>
+                                <li>Complemento 3</li>
+                                <li>Complemento 4</li>
+                                <li>Complemento 5</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <b data-toggle="collapse" data-target="#sic" style="cursor: pointer;">Servicios
+                              Superintendencia de Compañías</b>
+                            <hr>
+                            <div id="sic" class="collapse">
+                              <ul style="cursor: pointer;">
+                                <li>Complemento 1</li>
+                                <li>Complemento 2</li>
+                                <li>Complemento 3</li>
+                                <li>Complemento 4</li>
+                                <li>Complemento 5</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <b data-toggle="collapse" data-target="#municipio" style="cursor: pointer;">Servicios
+                              Municipio</b>
+                            <hr>
+                            <div id="municipio" class="collapse">
+                              <ul style="cursor: pointer;">
+                                <li>Complemento 1</li>
+                                <li>Complemento 2</li>
+                                <li>Complemento 3</li>
+                                <li>Complemento 4</li>
+                                <li>Complemento 5</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <b data-toggle="collapse" data-target="#otros" style="cursor: pointer;">Otros Servicios</b>
+                            <hr>
+                            <div id="otros" class="collapse">
+                              <ul style="cursor: pointer;">
+                                <li>Complemento 1</li>
+                                <li>Complemento 2</li>
+                                <li>Complemento 3</li>
+                                <li>Complemento 4</li>
+                                <li>Complemento 5</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header" id="headingTwo"
+                      style="background-color: #13683B; color: #fff; font-size: 15px;" data-toggle="collapse"
+                      data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      Suscripción
+                    </div>
+                    <div id="collapseTwo" class="collapse " aria-labelledby="headingTwo"
+                      data-parent="#accordionExample">
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div class="columns">
+                              <ul class="price">
+                                <li class="header" style="background-color:rgb(10, 53, 30)">Básico</li>
+                                <li class="grey">$ 9.99 / año</li>
+                                <li>Beneficio 1</li>
+                                <li>Beneficio 2</li>
+                                <li>Beneficio 3</li>
+                                <li>Beneficio 4</li>
+                                <li class="grey">
+                                  <input type="submit" value="Suscribirse" class="btn btn-primary px-5 btn-block"
+                                    style="height: 48px !important;">
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="columns">
+                              <ul class="price">
+                                <li class="header" style="background-color:#13683B">Profesional</li>
+                                <li class="grey">$ 24.99 / año</li>
+                                <li>Beneficio 1</li>
+                                <li>Beneficio 2</li>
+                                <li>Beneficio 3</li>
+                                <li>Beneficio 4</li>
+                                <li class="grey">
+                                  <input type="submit" value="Suscribirse" class="btn btn-primary px-5 btn-block"
+                                    style="height: 48px !important;">
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                   <div class="card">
                     <div class="card-header" id="headingOne"
                       style="background-color: #13683B; color: #fff; font-size: 15px;" data-toggle="collapse"
@@ -91,8 +248,7 @@
                       Catastro | Consulta Microempresas
                     </div>
 
-                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
-                      data-parent="#accordionExample">
+                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                       <div class="card-body">
                         <div class="row">
                           <div class="col-md-12">
@@ -191,51 +347,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="card">
-                    <div class="card-header" id="headingTwo"
-                      style="background-color: #13683B; color: #fff; font-size: 15px;" data-toggle="collapse"
-                      data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                      Suscripción
-                    </div>
-                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                      <div class="card-body">
-                        <div class="row">
-                          <div class="col-md-6">
-                            <div class="columns">
-                              <ul class="price">
-                                <li class="header" style="background-color:rgb(10, 53, 30)">Básico</li>
-                                <li class="grey">$ 9.99 / año</li>
-                                <li>Beneficio 1</li>
-                                <li>Beneficio 2</li>
-                                <li>Beneficio 3</li>
-                                <li>Beneficio 4</li>
-                                <li class="grey">
-                                  <input type="submit" value="Suscribirse" class="btn btn-primary px-5 btn-block"
-                                    style="height: 48px !important;">
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                          <div class="col-md-6">
-                            <div class="columns">
-                              <ul class="price">
-                                <li class="header" style="background-color:#13683B">Profesional</li>
-                                <li class="grey">$ 24.99 / año</li>
-                                <li>Beneficio 1</li>
-                                <li>Beneficio 2</li>
-                                <li>Beneficio 3</li>
-                                <li>Beneficio 4</li>
-                                <li class="grey">
-                                  <input type="submit" value="Suscribirse" class="btn btn-primary px-5 btn-block"
-                                    style="height: 48px !important;">
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+
                 </div>
               </div>
               <div class="col-md-4">
@@ -301,7 +413,7 @@
     </div>
   </section>
 
-  <section class="ftco-intro ftco-no-pb img" style="background-image: url(images/bg_1.jpg);">
+  <section class="ftco-intro ftco-no-pb img" style="background-image: url(images/bg_1.jpg); padding: 10px !important;">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-md-10 text-center heading-section heading-section-white ftco-animate">
@@ -380,7 +492,7 @@
   <% include ../world/footer/links %>
 
   <% include ../world/footer/float %>
-  
+
   <script>
     $(document).ready(function () {
 
@@ -402,6 +514,7 @@
       });
     });
   </script>
+
 
 </body>
 
