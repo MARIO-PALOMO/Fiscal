@@ -3,7 +3,22 @@
 
 <head>
   <% include ../world/header/links %>
-  
+  <style>
+    .card {
+      background-color: #f0f0f0;
+      padding: 20px;
+      border-radius: 10px 10px 10px 10px;
+      -moz-border-radius: 10px 10px 10px 10px;
+      -webkit-border-radius: 10px 10px 10px 10px;
+      color: black !important;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      background-color: #13683B;
+      color: #fff !important;
+    }
+  </style>
 </head>
 
 <body>
@@ -11,7 +26,7 @@
   <% include ../world/header/header %>
 
   <section class="home-slider owl-carousel">
-    <div class="slider-item" style="background-image:url(images/bg_2.jpg);">
+    <div class="slider-item" style="background-image:url(images/auditor.png);">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-end" data-scrollax-parent="true">
@@ -23,7 +38,7 @@
       </div>
     </div>
 
-    <div class="slider-item" style="background-image:url(images/bg_2.jpg);">
+    <div class="slider-item" style="background-image:url(images/contabilidad.png);">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-end" data-scrollax-parent="true">
@@ -48,7 +63,7 @@
     </div>
   </section>
 
-  <section class="ftco-intro ftco-no-pb img" style="background-image: url(images/bg_3.jpg);">
+  <section class="ftco-intro ftco-no-pb img" style="background-image: url(images/contable.png);">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-md-10 text-center heading-section heading-section-white ftco-animate">
@@ -58,12 +73,13 @@
     </div>
   </section>
 
-  <section class="ftco-section ftco-about ftco-no-pt ftco-no-pb ftco-counter" id="section-counter" style="background-color: azure;">
+  <section class="ftco-section ftco-about ftco-no-pt ftco-no-pb ftco-counter" id="section-counter"
+    style="background-color: azure;">
     <div class="container consult-wrap">
       <a name="acerca"></a>
       <div class="row d-flex align-items-stretch">
         <div class="col-md-6 wrap-about align-items-stretch d-flex">
-          <div class="img" style="background-image: url(images/about.jpg);"></div>
+          <div class="img" style="background-image: url(images/image_6.jpg);"></div>
         </div>
         <div class="col-md-6 wrap-about ftco-animate py-md-5 pl-md-5">
           <div class="heading-section mb-4">
@@ -115,8 +131,8 @@
                   Ser reconocidos en el mediano plazo por nuestros clientes como un socio estratégico
                   para la toma de decisiones a través de: <br><br>
 
-                  <b>• Confiabilidad y exactitud en nuestros servicios</b><br>
-                  <b>• Actualización constante</b><br><br>
+                  • Confiabilidad y exactitud en nuestros servicios<br>
+                  • Actualización constante<br><br>
 
                   Aplicando estos principios, deseamos establecer relaciones duraderas, de respeto y
                   responsabilidad, con nuestros clientes y la sociedad en general.
@@ -138,12 +154,12 @@
                 <p style="text-align: justify;">
                   Nuestra Ética Profesional: <br><br>
 
-                  <b>• Compromiso.</b><br>
-                  <b>• Lealtad.</b><br>
-                  <b>• Honestidad.</b><br>
-                  <b>• Calidez.</b><br>
-                  <b>• Respeto.</b><br>
-                  <b>• Responsabilidad.</b><br>
+                  • Compromiso.<br>
+                  • Lealtad.<br>
+                  • Honestidad.<br>
+                  • Calidez.<br>
+                  • Respeto.<br>
+                  • Responsabilidad.<br>
 
                 </p>
               </div>
@@ -183,7 +199,7 @@
     </div>
   </section>
 
-  <section class="ftco-intro ftco-no-pb img" style="background-image: url(images/bg_1.jpg);">
+  <section class="ftco-intro ftco-no-pb img" style="background-image: url(images/image_4.jpg);">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-md-10 text-center heading-section heading-section-white ftco-animate">
@@ -193,69 +209,208 @@
     </div>
   </section>
 
-  <section class="ftco-section ftco-about ftco-no-pt ftco-no-pb ftco-counter" id="section-counter" style="background-color: azure;">
-    <div class="container">     
-      <div class="row d-flex align-items-stretch">       
-        <div class="col-md-12">                
-          <div class="card-group m-4">
-            <ul class="nav nav-pills nav-fill d-md-flex d-block">              
-              <li class="col-md-4 nav-item px-lg-2">
-                <a href="/contabilidad" style="color: #13683B; font-size: 20px;"><span class="ion-ios-calculator mr-2"></span>Contabilidad</a>  
-                <p style="text-align: justify; background-color:ghostwhite;">Brindamos un servicio de asesoría contable dirigido
-                  a la tercerización de los servicios de contabilidad, garantizando absoluta reserva en el manejo de la 
-                  informacion asi como la custodia del mismo</p>                          
-              </li>  
-              <li class="col-md-4 nav-item px-lg-2">
-                <a href="/impuestos" style="color: #13683B; font-size: 20px;"><span class="ion-ios-bookmark mr-2"></span>Impuestos</a>
-                <p style="text-align: justify; background-color:ghostwhite;">Las asesorias contables y tributarias, pueden llegar 
-                  a limitar su operatividad, es por ello que se debe realizar seguimiento y una oportuna presentacion de
-                  informacion, lo que siempre conllevarà aun beneficio para su negocio.</p>
-              </li>
-              <li class="col-md-4 nav-item px-lg-2">
-                <a href="/nomina" style="color: #13683B; font-size: 25px;"><span class="ion-ios-person mr-2"></span>Nómina</a>
-                <p style="text-align: justify; background-color:ghostwhite;">Colaboramos en la administración de nómina de pequeñas
-                   y medianas compañías que estén por instalarse o se encuentren funcionando en el territorio Ecuatoriano.</p>
-              </li>                  
-            </ul>                    
+
+
+  <section class="ftco-section ftco-about ftco-no-pt ftco-no-pb ftco-counter" id="section-counter">
+    <div class="container">
+      <div class="row d-flex align-items-stretch">
+        <br><br>
+        <div class="row">
+          <div class="col-md-6 card">
+            <div class="row">
+              <div class="col-md-3" style="line-height: 200px; width: auto;">
+                <a href="/contabilidad"><img src="images/contable.png" alt="" style="width: 100%;"></a>
+              </div>
+              <div class="col-md-9">
+                <div>
+                  <b style="font-size: 22px;">Contabilidad</b>
+                  <hr>
+                  <p style="text-align: justify;"><a href="/contabilidad" style="color: darkgray;">Brindamos un servicio de asesoría contable dirigido a la tercerización
+                    de los servicios de contabilidad,
+                    garantizando absoluta reserva en el manejo de la informacion asi como la custodia del mismo.</a></p>
+                </div>
+              </div>
             </div>
-          </div>    
+          </div>
+
+          <div class="col-md-6 card" style="left: 12px;">
+            <div class="row">
+              <div class="col-md-3" style="line-height: 200px; width: auto;">
+                <a href="/impuestos"><img src="images/auditor.png" alt="" style="width: 100%;"></a>
+              </div>
+              <div class="col-md-9">
+                <div>
+                  <b style="font-size: 22px;">Impuestos</b>
+                  <hr>
+                  <p style="text-align: justify;"><a href="/impuestos" style="color: darkgray;">Las asesorias contables y tributarias, pueden llegar a limitar su
+                    operatividad,
+                    es por ello que se debe realizar seguimiento y una oportuna presentacion de informacion, lo que
+                    siempre
+                    conllevarà aun beneficio para su negocio.</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 card" style="top: 10px;">
+            <div class="row">
+              <div class="col-md-3" style="line-height: 200px; width: auto;">
+                <a href="/nomina"><img src="images/grupo.png" alt="" style="width: 100%;"></a>
+              </div>
+              <div class="col-md-9">
+                <div>
+                  <b style="font-size: 22px;">Nómina</b>
+                  <hr>
+                  <p style="text-align: justify;"><a href="/nomina" style="color: darkgray;">Colaboramos en la administración de nómina de pequeñas
+                    y medianas compañías que estén por instalarse o se encuentren funcionando en el territorio
+                    Ecuatoriano.</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 card" style="left: 12px; top: 10px;">
+            <div class="row">
+              <div class="col-md-3" style="line-height: 200px; width: auto;">
+                <a href="/auditorias"><img src="images/auditoria.png" alt="" style="width: 100%;"></a>
+              </div>
+              <div class="col-md-9">
+                <div>
+                  <b style="font-size: 22px;">Auditorias, Revisión Fiscal</b>
+                  <hr>
+                  <p style="text-align: justify;"><a href="/auditorias" style="color: darkgray;">El objetivo es prestar servicios en asesoria fiscal y auditorias
+                    es dar un apoyo permanente a la direccion de la compañía en aquellos temas que sean de nuestra
+                    competencia
+                    y se basen en las normas actuales.</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 card" style="top: 20px;">
+            <div class="row">
+              <div class="col-md-3" style="line-height: 200px; width: auto;">
+                <a href="/capacitacion"><img src="images/capacitacion.png" alt="" style="width: 100%;"></a>
+              </div>
+              <div class="col-md-9">
+                <div>
+                  <b style="font-size: 22px;">Capacitación</b>
+                  <hr>
+                  <p style="text-align: justify;"><a href="/capacitacion" style="color: darkgray;">El objetivo es prestar servicios en asesoria fiscal y auditorias
+                    es dar un apoyo permanente a la direccion de la compañía en aquellos
+                    temas que sean de nuestra competencia y se basen en las normas actuales.</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 card" style="left: 12px; top: 20px;">
+            <div class="row">
+              <div class="col-md-3" style="line-height: 200px; width: auto;">
+                <a href="/asesoria"><img src="images/reunido.png"  alt="" style="width: 100%;"></a>
+              </div>
+              <div class="col-md-9">
+                <div>
+                  <b style="font-size: 22px;">Asesoría</b>
+                  <hr>
+                  <p style="text-align: justify;"><a href="/asesoria" style="color: darkgray;">Debido a la gran competividad del mercado, es importante
+                    que los empresarios cuenten con empresas de confianza que vayan de la mano con el diario
+                    vivir de su negocio.</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+
+  <section class="ftco-intro ftco-no-pb img" style="background-image: url(images/image_4.jpg);">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-10 text-center heading-section heading-section-white ftco-animate">
+          <h2 class="mb-0" style="font-size: 30px;">Planes de nuestros servicios</h2>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="ftco-section ftco-about ftco-no-pt ftco-no-pb ftco-counter" id="section-counter" style="background-color: azure;">
-    <div class="container">     
-      <div class="row d-flex align-items-stretch">       
-        <div class="col-md-12">                
-          <div class="card-group">
-            <ul class="nav nav-pills nav-fill d-md-flex d-block">
-              <li class="col-md-4 nav-item px-lg-2">
-                <a href="/auditorias" style="color: #13683B; font-size: 20px;"><span class="ion-ios-business mr-2"></span>Auditorias, Revisión Fiscal</a> 
-                <p style="text-align: justify; background-color:ghostwhite;">El objetivo es prestar servicios en asesoria fiscal y auditorias
-                  es dar un apoyo permanente a la direccion de la compañía en aquellos 
-                  temas que sean de nuestra competencia  y se basen en las normas actuales.</p>                           
-              </li>  
-              <li class="col-md-4 nav-item px-lg-2">
-                <a href="/capacitacion" style="color: #13683B; font-size: 20px;"><span class="ion-ios-desktop mr-2"></span>Capacitación</a> 
-                <p style="text-align: justify; background-color:ghostwhite;">El objetivo es prestar servicios en asesoria fiscal y auditorias
-                  es dar un apoyo permanente a la direccion de la compañía en aquellos 
-                  temas que sean de nuestra competencia  y se basen en las normas actuales.</p>  
-              </li>
-              <li class="col-md-4 nav-item px-lg-2">
-                <a href="/asesoria" style="color: #13683B; font-size: 20px;"><span class="ion-ios-globe mr-2"></span>Asesoría</a> 
-                <p style="text-align: justify; background-color:ghostwhite">Debido a la gran competividad del mercado, es importante 
-                  que los empresarios cuenten con empresas de confianza que vayan de la mano con el diario 
-                  vivir de su negocio.</p>  
-              </li>                
-            </ul>                  
+
+  <section class="ftco-section ftco-about ftco-no-pt ftco-no-pb ftco-counter" id="section-counter">
+    <div class="container"><br>
+      <div class="row d-flex align-items-stretch">
+        <div class="col-md-4 card">
+          <div class="row">
+            <div class="columns">
+              <div>
+                <ul class="price">
+                  <h2 style="text-align: center; background-color: gold;">PYME</h2>
+                  • 25 USD/Mes<br>
+                  • 10% de descuento en pago anual<br>
+                  • 100 facturas de ventas mensuales<br>
+                  • 2 usuarios con acceso<br>
+                  • 25 USD/Mes<br>
+                  • 10% de descuento en pago anual<br>
+                  • 100 facturas de ventas mensuales<br>
+                  • 2 usuarios con acceso<br><br>
+                  <input type="submit" value="ELEGIR PLAN" class="btn btn-primary px-5 btn-block"
+                  style="height: 48px !important; font-size: 15px; background-color: grey;">
+                  </li>
+                </ul>
+              </div>
             </div>
-          </div>   
+          </div>
+        </div>
+
+        <div class="col-md-4 card" style="left: 12px;">
+          <div class="row">
+            <div class="columns">
+              <div>
+                <ul class="price">
+                  <h2 style="text-align: center; background-color: deepskyblue;">PRO</h2>
+                  • 25 USD/Mes<br>
+                  • 10% de descuento en pago anual<br>
+                  • 100 facturas de ventas mensuales<br>
+                  • 2 usuarios con acceso<br>
+                  • 25 USD/Mes<br>
+                  • 10% de descuento en pago anual<br>
+                  • 100 facturas de ventas mensuales<br>
+                  • 2 usuarios con acceso<br><br>
+                  <input type="submit" value="ELEGIR PLAN" class="btn btn-primary px-5 btn-block"
+                    style="height: 48px !important; font-size: 15px; background-color: grey;">
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 card" style="left: 24px;">
+          <div class="row">
+            <div class="columns">
+              <div>
+                <ul class="price">
+                  <h2 style="text-align: center; background-color: deeppink;">PLUS</h2>
+                  • 25 USD/Mes<br>
+                  • 10% de descuento en pago anual<br>
+                  • 100 facturas de ventas mensuales<br>
+                  • 2 usuarios con acceso<br>
+                  • 25 USD/Mes<br>
+                  • 10% de descuento en pago anual<br>
+                  • 100 facturas de ventas mensuales<br>
+                  • 2 usuarios con acceso<br><br>
+                  <input type="submit" value="ELEGIR PLAN" class="btn btn-primary px-5 btn-block"
+                    style="height: 48px !important; font-size: 15px; background-color: grey;">
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
-
 
   <section class="ftco-section testimony-section">
     <div class="container-fluid px-md-5">
@@ -277,7 +432,8 @@
                       <div class="icon">
                         <span class="icon-map-o" style="font-size: 30px; color: #13683B;"></span>
                       </div>
-                      <p><span style="font-size: 18px;"><b>Dirección:</b></span><br>Jorge
+                      <p style="color: #13683B;"><span
+                          style="font-size: 18px; color: black;"><b>Dirección:</b></span><br>Jorge
                         Washington
                         E4-59 y Amazonas Edif.
                         Rocafuerte, Of. 5, sector C.C.Espiral
@@ -289,7 +445,9 @@
                       <div class="icon">
                         <span class="icon-tablet" style="font-size: 30px; color: #13683B"></span>
                       </div>
-                      <p><span style="font-size: 18px;"><b>Teléfono:</b></span><br>+593 997607812
+                      <p><span style="font-size: 18px;"><b>
+                            Teléfono:</b></span><br><a href="tel:+022500610">022500610, </a><a
+                          href="tel:+0997607812">0997607812</a></p>
                     </div>
                   </div>
                   <div class="col-md-4 text-center d-flex">
@@ -298,7 +456,7 @@
                         <span class="icon-envelope-o" style="font-size: 30px; color: #13683B"></span>
                       </div>
                       <p><span style="font-size: 18px;"><b>Correo Electrónico:</b></span><br>
-                        info@adcontur.com</p>
+                        <a href="mailto:info@adcontur.com">info@adcontur.com</a></p>
                     </div>
                   </div>
                 </div>
@@ -324,7 +482,7 @@
 
   <% include ../world/footer/links %>
 
-  
+
   <% include ../world/footer/float %>
 
 
