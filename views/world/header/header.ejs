@@ -33,18 +33,44 @@
     </div>
 </div>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light" id="ftco-navbar" style=" position: -webkit-sticky;
-position: sticky;
-top: 0; z-index: 500 !important;
-background: rgb(250,219,172) !important;
-background: linear-gradient(90deg, rgba(250,219,172,1) 19%, rgba(19,104,59,1) 43%) !important;">
+<style>
+    .fondo {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        z-index: 500 !important;
+        background: rgb(250, 219, 172) !important;
+        background: linear-gradient(90deg, rgba(250, 219, 172, 1) 19%, rgba(19, 104, 59, 1) 43%) !important;
+    }
+
+    .lgo2 {
+        display: none
+    }
+
+    @media only screen and (max-width: 575px) {
+        .fondo {
+            background: #13683b !important;
+        }
+
+        .lgo1 {
+            display: none
+        }
+
+        .lgo2 {
+            display: block
+        }
+    }
+</style>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light fondo" id="ftco-navbar">
     <div class="container d-flex align-items-center" style="padding: 10px;">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
             aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="oi oi-menu"></span> Menú
         </button>
         <div class="col-md-4 d-flex align-items-center py-2">
-            <img src="images/logo.png" alt="ADCONTUR" style="width: 90%;">
+            <img src="images/logo.png" alt="ADCONTUR" style="width: 90%;" class="lgo1">
+            <img src="images/logoBlanco.png" alt="ADCONTUR" style="width: 90%;" class="lgo2">
         </div>
         <div class="collapse navbar-collapse clase" id="ftco-nav">
             <ul class="navbar-nav mr-auto">
