@@ -198,6 +198,7 @@
     </div>
   </section>
 
+  <a name="servicios_"></a>
   <section class="ftco-intro ftco-no-pb img" style="background-image: url(images/image_4.jpg);">
     <div class="container">
       <div class="row justify-content-center">
@@ -235,9 +236,7 @@
       position: relative;
     }
 
-    .welcome_details {
-     
-    }
+    .welcome_details {}
 
     .welcome_details img {
       background: rgb(14, 71, 41);
@@ -311,6 +310,31 @@
     .welcome_new_:hover {
       background-color: #13683b !important;
     }
+
+    @media only screen and (max-width: 575px) {
+      .fots_ {
+        display: none;
+        padding: 0px;
+        position: static;
+        z-index: 0;
+        top: 0px;
+      }
+
+      .welcome_details .welcome_info {
+        width: 100%;
+        margin-left: 0px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+      }
+
+      .welcome_details p {
+        padding: 0px;
+      }
+
+      .welcome_details h3 {
+        padding: 0px;
+      }
+    }
   </style>
 
   <section class="welcome_sec">
@@ -318,7 +342,7 @@
       <div class="row welcome welcome_details">
         <div class="col-md-6" style="padding: 20px;">
           <div class="welcome_item"><a href="/contabilidad">
-              <img src="images/contable.png" width="200">
+              <img src="images/contable.png" width="200" class="fots_">
               <div class="welcome_info welcome_new_">
                 <h3>Contabilidad</h3>
                 <p>Brindamos un servicio de asesoría contable dirigido a la tercerización de los servicios de
@@ -330,7 +354,7 @@
         </div>
         <div class="col-md-6" style="padding: 20px;">
           <div class="welcome_item"><a href="/impuestos">
-              <img src="images/auditor.png" width="200">
+              <img src="images/auditor.png" width="200" class="fots_">
               <div class="welcome_info welcome_new_">
                 <h3>Impuestos</h3>
                 <p>Las asesorias contables y tributarias, pueden llegar a limitar su operatividad, es por ello que se
@@ -342,7 +366,7 @@
         </div>
         <div class="col-md-6" style="padding: 20px;">
           <div class="welcome_item"><a href="/nomina">
-              <img src="images/grupo.png" width="200">
+              <img src="images/grupo.png" width="200" class="fots_">
               <div class="welcome_info welcome_new_">
                 <h3>Nómina</h3>
                 <p>Colaboramos en la
@@ -355,7 +379,7 @@
         </div>
         <div class="col-md-6" style="padding: 20px;">
           <div class="welcome_item"><a href="/auditorias">
-              <img src="images/auditoria.png" width="200">
+              <img src="images/auditoria.png" width="200" class="fots_">
               <div class="welcome_info welcome_new_">
                 <h3>Auditorias, Revisión Fiscal</h3>
                 <p>El objetivo es prestar servicios en asesoria fiscal y auditorias es dar un apoyo permanente a la
@@ -367,7 +391,7 @@
         </div>
         <div class="col-md-6" style="padding: 20px;">
           <div class="welcome_item"><a href="/capacitacion">
-              <img src="images/capacitacion.png" width="200">
+              <img src="images/capacitacion.png" width="200" class="fots_">
               <div class="welcome_info welcome_new_">
                 <h3>Capacitación</h3>
                 <p>El objetivo es
@@ -380,7 +404,7 @@
         </div>
         <div class="col-md-6" style="padding: 20px;">
           <div class="welcome_item"><a href="/asesoria">
-              <img src="images/reunido.png" width="200">
+              <img src="images/reunido.png" width="200" class="fots_">
               <div class="welcome_info welcome_new_">
                 <h3>Asesoría</h3>
                 <p>Debido a la gran
@@ -835,7 +859,7 @@
     }
   </style>
 
-  <div id="generic_price_table" >
+  <div id="generic_price_table">
     <section>
       <div class="container">
 
