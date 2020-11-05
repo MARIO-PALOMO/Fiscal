@@ -27,34 +27,28 @@
         <div class="col-md-12 text-center">
           <div class="row">
             <div id="imprimible" class="col-md-8 wrap-about ftco-animate py-md-5 pl-md-5 fadeInUp ftco-animated"
-              style="padding: 25px; border: 0.5px solid #dddddd; border-radius: 0.45rem !important;">
-              <div style="text-align: left !important;" class="heading-section mb-4">
-                <h2>Webinar - Buenas prácticas contables en tiempos de crisis</h2>
+              style="padding: 25px">
+              <div style="text-align: justify !important;" class="heading-section mb-4">
+                <h2>Tablas para liquidar Impuesto a la Renta e Impuesto a las Herencias año 2020</h2>
               </div>
               
               <p style="text-align: left;">
-                NOTICIA
+                INFORMACIÓN
               </p>
               <p style="text-align: justify;">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut sed adipisci explicabo
-                reiciendis aspernatur accusantium assumenda cumque non neque voluptatibus modi omnis ex
-                quia repudiandae eius repellendus ducimus, maiores voluptates. Lorem ipsum dolor sit
-                amet consectetur adipisicing elit. Ut sed adipisci explicabo
-                reiciendis aspernatur accusantium assumenda cumque non neque voluptatibus modi omnis ex
-                quia repudiandae eius repellendus ducimus, maiores voluptates. Lorem ipsum dolor sit
-                amet consectetur adipisicing elit. Ut sed adipisci explicabo
-                reiciendis aspernatur accusantium assumenda cumque non neque voluptatibus modi omnis ex
-                quia repudiandae eius repellendus ducimus, maiores voluptates. Lorem ipsum dolor sit
-                amet consectetur adipisicing elit. Ut sed adipisci explicabo
-                reiciendis aspernatur accusantium assumenda cumque non neque voluptatibus modi omnis ex
-                quia repudiandae eius repellendus ducimus, maiores voluptates. Lorem ipsum dolor sit
-                amet consectetur adipisicing elit. Ut sed adipisci explicabo
-                reiciendis aspernatur accusantium assumenda cumque non neque voluptatibus modi omnis ex
-                quia repudiandae eius repellendus ducimus, maiores voluptates. Lorem ipsum dolor sit
-                amet consectetur adipisicing elit. Ut sed adipisci explicabo
-                reiciendis aspernatur accusantium assumenda cumque non neque voluptatibus modi omnis ex
-                quia repudiandae eius repellendus ducimus, maiores voluptates.
+              Según Resolución <a href="pdf/NAC-DGERCGC19-00000063.pdf" target="_blank" style="color: #13683B">No. NAC-DGERCGC19-00000063</a> del SRI, publicada en el Suplemento al Registro Oficial No. 108 de 26 de diciembre.<br><br>
+              &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;El Servicio de Rentas internas expidió los rangos de las tablas para liquidar el impuesto a la renta de las personas naturales,
+              sucesiones indivisas, incrementos patrimoniales provenientes de herencias, legados, donaciones, hallazgos y todo tipo de acto o
+              contrato por el cual se adquiera el dominio a título gratuito, de bienes y derechos para el período fiscal 2020.<br><br>
+              La Resolución establece:<br><br>
+              Para el ejercicio 2020, el impuesto a la renta de las personas naturales y sucesiones indivisas se liquidará conforme a la siguiente tabla:<br><br>
+              Para el 2020, el impuesto a la renta derivado de incrementos patrimoniales provenientes de herencias, legados, donaciones, hallazgos 
+              y todo tipo de acto o contrato por el cual se adquiera el dominio a título gratuito, de bienes y derechos, se liquidará conforme a la
+              siguiente tabla:        
               </p>
+              <div align="center">
+                <img src="images/tabla_impuesto_2020.png" alt="" width="540">
+              </div> 
             </div>
             <div class="col-md-1"></div>
             <div class="col-md-3 wrap-about ftco-animate py-md-5 pl-md-5 fadeInUp ftco-animated"
@@ -73,19 +67,19 @@
                 </p>
                 <p class="social mb-0">
 
-                  <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://adcontur.herokuapp.com/detalle?id=1"
-                    target="_blank">
-                    <img src="images/linkedin.png" alt="" width="28">
-                  </a>
+                  <a href="#" target="_blank">
+                    <img src="images/instagram.png" alt="" width="28">
+                  </a>                
                   &nbsp;&nbsp;
                   <a href="http://www.facebook.com/sharer.php?u=https://adcontur.herokuapp.com/detalle?id=1"
                     target="_blank">
                     <img src="images/facebook.png" alt="" width="28">
                   </a>
                   &nbsp;&nbsp;
-                  <a href="#" target="_blank">
-                    <img src="images/instagram.png" alt="" width="28">
-                  </a>
+                  <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://adcontur.herokuapp.com/detalle?id=1"
+                  target="_blank">
+                  <img src="images/linkedin.png" alt="" width="28">
+                </a>                
                   &nbsp;&nbsp;
                   <a style="cursor: pointer;" id="btnImprimirParrafo" style="font-size: 30px;" target="_blank"><img
                       src="images/printer.png" alt="Imprimir" width="28"></a>
@@ -194,7 +188,7 @@
     $("#btnImprimirParrafo").click(function () {
       $('#imprimible').printThis({
         importCSS: false,
-        header: `<table style="width: 100%; font-style: italic; font-weight: bold">
+        header: `<table style="width: 100%; font-style: normal; font-weight: bold">
           <tr>
         <td style="text-align: left;">
           Jorge Washington N21-39 y Av Amazonas.<br>
@@ -207,15 +201,15 @@
       </tr>
       <tr>
     <td colspan="2">
-      <br><br><br>
-    </td>
+      <br>
+    </td>   
   </tr>
     </table>`,
         footer: `
         <footer style="position: absolute;
   bottom: 0;
   width: 100%;">
-          <table style="width: 100%; font-style: italic; font-weight: bold">
+          <table style="width: 100%; font-style: normal; font-weight: bold">
       <tr>
         <td style="text-align: center;">
           <img src="images/phone.png" alt="" width="15">&nbsp; 2 500 610 <br>
