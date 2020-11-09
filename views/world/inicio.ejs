@@ -25,42 +25,69 @@
 
   <% include ../world/header/header %>
 
-  <section class="home-slider owl-carousel">
-    <div class="slider-item" style="background-image:url(images/auditor.png);">
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="row no-gutters slider-text align-items-center justify-content-end" data-scrollax-parent="true">
-          <div class="col-md-7 ftco-animate mb-md-5">
-            <span class="subheading">Adcontur ACP</span>
-            <h1 class="mb-4">Soluciones Contables</h1>
+  <section>
+
+    <div class="row">
+      <div class="col-md-8">
+
+
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active" style="height: 350px !important;">
+              <img class="d-block w-100" src="images/contabilidad.png" alt="First slide">
+              <div class="carousel-caption d-none d-md-block">
+                <h5 style="font-weight: bold;">Adcontur ACP</h5>
+                <h5>Soluciones Contables</h5>
+              </div>
+            </div>
+            <div class="carousel-item" style="height: 350px !important;">
+              <img class="d-block w-100" src="images/bg_3.jpg" alt="Second slide">
+              <div class="carousel-caption d-none d-md-block">
+                <h5 style="font-weight: bold;">Adcontur ACP</h5>
+                <h5>Soluciones Tributarias</h5>
+              </div>
+            </div>
+            <div class="carousel-item" style="height: 350px !important;">
+              <img class="d-block w-100" src="images/contable.png" alt="Third slide">
+              <div class="carousel-caption d-none d-md-block">
+                <h5 style="font-weight: bold;">Adcontur ACP</h5>
+                <h5>Soluciones Administrativas</h5>
+              </div>
+            </div>
           </div>
+          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+
+      </div>
+      <div class="col-md-4">
+        <div style="padding: 20px;">
+          <b style="font-size: 17px;">CONTENIDO RECIENTE</b>
+          <br>
+          <b>Servicios mas buscados</b><br>
+          <span>Contabilidad</span><br>
+          <span>Nómina</span><br>
+          <span>Asesoría</span><br>
+          <span>Capacitación</span><br><br>
+
+          <b>Último tema de interés</b><br>
+          <span>Tablas para liquidar...</span><b>ver más</b><br>
         </div>
       </div>
     </div>
 
-    <div class="slider-item" style="background-image:url(images/contabilidad.png);">
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="row no-gutters slider-text align-items-center justify-content-end" data-scrollax-parent="true">
-          <div class="col-md-7 ftco-animate mb-md-5">
-            <span class="subheading">Adcontur ACP</span>
-            <h1 class="mb-4">Soluciones Tributarias</h1>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <div class="slider-item" style="background-image:url(images/bg_3.jpg);">
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="row no-gutters slider-text align-items-center justify-content-end" data-scrollax-parent="true">
-          <div class="col-md-7 ftco-animate mb-md-5">
-            <span class="subheading">Adcontur ACP</span>
-            <h1 class="mb-4">Soluciones Administrativas</h1>
-          </div>
-        </div>
-      </div>
-    </div>
   </section>
 
   <section class="ftco-intro ftco-no-pb img" style="background-image: url(images/contable.png);">
