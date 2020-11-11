@@ -9488,14 +9488,8 @@ textarea.form-control {
     content: '';
     z-index: -1;
     opacity: .9;
-    background: #13683b;
-    background: #48a7f0;
-    background: -moz-linear-gradient(45deg, #48a7f0 0%, #13683b 100%);
-    background: -webkit-gradient(left bottom, right top, color-stop(0%, #48a7f0), color-stop(100%, #13683b));
-    background: -webkit-linear-gradient(45deg, #48a7f0 0%, #13683b 100%);
-    background: -o-linear-gradient(45deg, #48a7f0 0%, #13683b 100%);
-    background: -ms-linear-gradient(45deg, #48a7f0 0%, #13683b 100%);
-    background: linear-gradient(45deg, #48a7f0 0%, #13683b 100%);
+    background: rgb(215, 254, 242) !important;
+    background: linear-gradient(90deg, rgba(215, 254, 242, 1) 0%, rgba(19, 104, 59, 1) 57%) !important;
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#48a7f0', endColorstr='#13683b', GradientType=1 ); }
   .ftco-intro .btn {
     width: 100%; }
