@@ -9,8 +9,20 @@
 
   <% include ../world/header/header %>
 
+  <style>
+    ul li::before {
+      content: "\2022";
+      color: #13683b;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+  </style>
 
-  <section style="padding: 15px; background-color: #f7f7f7; text-align: center;">
+
+  <section
+    style="padding: 15px; background-color: #f7f7f7; text-align: center; position: -webkit-sticky !important; position: sticky !important; top: 100px !important; z-index: 100 !important;">
     <img src="images/contabilidad_titulo.png" width="325">
   </section>
 
