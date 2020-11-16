@@ -23,7 +23,7 @@
 
 <body>
 
-  <% include ../world/header/header %>
+  <%- include('../world/header/header', {data: data}); %>
 
   <section>
 
@@ -39,21 +39,21 @@
             </ol>
             <div class="carousel-inner">
               <div class="carousel-item active" style="height: 400px !important; width: 100% !important;">
-                <img class="d-block w-100" src="images/contabilidad.png" alt="First slide">
+                <img class="d-block w-100" src="images/carrucel1.jpg" alt="First slide">
                 <div class="carousel-caption d-none d-md-block">
                   <h5 style="font-weight: bold; color: #ffffff;">Adcontur ACP</h5>
                   <h5 style="color: #ffffff;">Soluciones Contables</h5>
                 </div>
               </div>
               <div class="carousel-item" style="height: 400px !important;">
-                <img class="d-block w-100" src="images/bg_3.jpg" alt="Second slide">
+                <img class="d-block w-100" src="images/carrucel2.jpg" alt="Second slide">
                 <div class="carousel-caption d-none d-md-block">
                   <h5 style="font-weight: bold; color: #ffffff;">Adcontur ACP</h5>
                   <h5 style="color: #ffffff;">Soluciones Tributarias</h5>
                 </div>
               </div>
               <div class="carousel-item" style="height: 400px !important;">
-                <img class="d-block w-100" src="images/contable.png" alt="Third slide">
+                <img class="d-block w-100" src="images/carrucel3.jpg" alt="Third slide">
                 <div class="carousel-caption d-none d-md-block">
                   <h5 style="font-weight: bold;  color: #ffffff;">Adcontur ACP</h5>
                   <h5 style="color: #ffffff;">Soluciones Administrativas</h5>
@@ -71,20 +71,20 @@
           </div>
 
         </div>
-        <div class="col-md-4" style="background-image: url('images/fondoServicios.jpg');background-size: cover;">
+        <div class="col-md-4" style="background-image: url('images/notice.jpg');background-size: cover;">
           <div style="padding: 20px;">
 
             <div
-              style="background-color: rgb(241, 241, 241); padding: 25px; border-radius: 0.45rem !important; border: 1px solid #13683b !important;">
+              style="background-color: rgba(0, 0, 0, 0.5); padding: 25px; border-radius: 0.45rem !important; border: 1px solid #13683b !important; color: #ffffff !important;">
 
               <div>
-                <b style="color: #13683b;">TEMAS DE INTERÉS</b>
+                <b>TEMAS DE INTERÉS</b>
               </div>
               <div>
-                <a href="">* <span>Tabla impuesto a la renta</span></a>
+                <a href="" style="color: #fff;">* <span>Tabla impuesto a la renta</span></a>
               </div>
               <div>
-                <a href="">* <span>Ley Microempresas</span></a>
+                <a href="" style="color: #fff;">* <span>Ley Microempresas</span></a>
               </div>
 
             </div>
@@ -408,81 +408,22 @@
   <section class="welcome_sec">
     <div class="container">
       <div class="row welcome welcome_details">
+
+        <% for(var i=0; i < data.length; i++) { %>
+
         <div class="col-md-6" style="padding: 20px;">
-          <div class="welcome_item"><a href="/contabilidad">
-              <img src="images/contable.png" width="200" class="fots_">
+          <div class="welcome_item"><a href="<%= data[i].path %>">
+              <img src="<%= url_imagen + data[i].imagen %>" width="200" class="fots_">
               <div class="welcome_info welcome_new_">
-                <h3>Contabilidad</h3>
-                <p>Brindamos un servicio de asesoría contable dirigido a la tercerización de los servicios de
-                  contabilidad, garantizando absoluta reserva en el manejo de la informacion asi como la custodia del
-                  mismo.</p>
+
+                <h3><%= data[i].titulo %></h3>
+                <p><%= data[i].descripcion_corta %></p>
               </div>
             </a>
           </div>
         </div>
-        <div class="col-md-6" style="padding: 20px;">
-          <div class="welcome_item"><a href="/impuestos">
-              <img src="images/auditor.png" width="200" class="fots_">
-              <div class="welcome_info welcome_new_">
-                <h3>Impuestos</h3>
-                <p>Las asesorias contables y tributarias, pueden llegar a limitar su operatividad, es por ello que se
-                  debe realizar seguimiento y una oportuna presentacion de informacion, lo que siempre conllevarà aun
-                  beneficio para su negocio.</p>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-md-6" style="padding: 20px;">
-          <div class="welcome_item"><a href="/nomina">
-              <img src="images/grupo.png" width="200" class="fots_">
-              <div class="welcome_info welcome_new_">
-                <h3>Nómina</h3>
-                <p>Colaboramos en la
-                  administración de nómina de pequeñas
-                  y medianas compañías que estén por instalarse o se encuentren funcionando en el territorio
-                  Ecuatoriano.</p>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-md-6" style="padding: 20px;">
-          <div class="welcome_item"><a href="/auditorias">
-              <img src="images/auditoria.png" width="200" class="fots_">
-              <div class="welcome_info welcome_new_">
-                <h3>Auditorias, Revisión Fiscal</h3>
-                <p>El objetivo es prestar servicios en asesoria fiscal y auditorias es dar un apoyo permanente a la
-                  direccion de la compañía en aquellos temas que sean de nuestra competencia y se basen en las normas
-                  actuales.</p>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-md-6" style="padding: 20px;">
-          <div class="welcome_item"><a href="/capacitacion">
-              <img src="images/capacitacion.png" width="200" class="fots_">
-              <div class="welcome_info welcome_new_">
-                <h3>Capacitación</h3>
-                <p>El objetivo es
-                  prestar servicios en asesoria fiscal y auditorias
-                  es dar un apoyo permanente a la direccion de la compañía en aquellos
-                  temas que sean de nuestra competencia y se basen en las normas actuales.</p>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-md-6" style="padding: 20px;">
-          <div class="welcome_item"><a href="/asesoria">
-              <img src="images/reunido.png" width="200" class="fots_">
-              <div class="welcome_info welcome_new_">
-                <h3>Asesoría</h3>
-                <p>Debido a la gran
-                  competividad del mercado, es importante
-                  que los empresarios cuenten con empresas de confianza que vayan de la mano con el diario
-                  vivir de su negocio.</p>
-              </div>
-            </a>
-          </div>
-        </div>
+
+        <% } %>
       </div>
     </div>
   </section>

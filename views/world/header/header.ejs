@@ -78,13 +78,15 @@
                 <li class="nav-item"><a href="/" class="nav-link" style="font-size: 15px !important;">Inicio</a></li>
                 <li class="nav-item">
                     <a href="/#servicios_" class="nav-link" style="font-size: 15px !important;">Servicios</a>
+
                     <ul class="dropdown-menu" style="background-color: #13683b;">
-                        <li><a href="/contabilidad" style="font-size: 15px !important;">Contabilidad</a></li>
-                        <li><a href="/impuestos" style="font-size: 15px !important;">Impuestos</a></li>
-                        <li><a href="/nomina" style="font-size: 15px !important;">Nómina</a></li>
-                        <li><a href="/auditorias" style="font-size: 15px !important;">Auditorías</a></li>
-                        <li><a href="/capacitacion" style="font-size: 15px !important;">Capacitación</a></li>
-                        <li><a href="/asesoria" style="font-size: 15px !important;">Asesoría</a></li>
+
+                        <% for(var i=0; i < data.length; i++) { %>
+                        <li>
+                            <a href="<%= data[i].path %>" style="font-size: 15px !important;"><%= data[i].titulo %></a>
+                        </li>
+                        <% } %>
+
                     </ul>
                 </li>
                 <li class="nav-item"><a href="/temas" class="nav-link" style="font-size: 15px !important;">Temas de
@@ -98,3 +100,7 @@
         </div>
     </div>
 </nav>
+
+<script>
+
+</script>
