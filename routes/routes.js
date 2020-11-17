@@ -12,7 +12,7 @@ var controller = require('../controllers');
 });*/
 
 router.get('/', controller.servicio.listarServicios);
-router.post('/servicio', controller.servicio.listarServicio);
+router.get('/servicio', controller.servicio.listarServicio);
 
 router.get('/temas', function (req, res, next) {
   res.render('world/temas');
