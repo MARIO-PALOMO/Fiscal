@@ -14,44 +14,13 @@ var controller = require('../controllers');
 router.get('/', controller.servicio.listarServicios);
 router.get('/servicio', controller.servicio.listarServicio);
 
-router.get('/temas', function (req, res, next) {
-  res.render('world/temas');
-});
+router.get('/temas', controller.tema_interes.listarTemasInteres);
+router.get('/detalle', controller.tema_interes_detalle.visualizarTemaDetalle);
+router.get('/detalleTema', controller.tema_interes_detalle.listarTemaDetalle);
 
-router.get('/detalle', function (req, res, next) {
-  res.render('world/temaDetalle', { tema: req.query.id });
-});
+router.get('/trabaja', controller.trabaja.listarTrabajaNosotros);
 
-router.get('/trabaja', function (req, res, next) {
-  res.render('world/trabaja', { tema: req.query.id });
-});
-
-router.get('/contabilidad', function (req, res, next) {
-  res.render('world/contabilidad', { tema: req.query.id });
-});
-
-
-router.get('/auditorias', function (req, res, next) {
-  res.render('world/auditorias', { tema: req.query.id });
-});
-
-
-router.get('/capacitacion', function (req, res, next) {
-  res.render('world/capacitacion', { tema: req.query.id });
-});
-
-
-router.get('/impuestos', function (req, res, next) {
-  res.render('world/impuestos', { tema: req.query.id });
-});
-
-router.get('/nomina', function (req, res, next) {
-  res.render('world/nomina', { tema: req.query.id });
-});
-
-router.get('/asesoria', function (req, res, next) {
-  res.render('world/asesorias', { tema: req.query.id });
-});
+router.get('/linea', controller.recursos_linea.listarRecursosLinea);
 
 router.get('/linea', function (req, res, next) {
   res.render('world/linea', { tema: req.query.id });

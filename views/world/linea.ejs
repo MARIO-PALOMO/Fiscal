@@ -73,19 +73,14 @@
 
 <body>
 
-  <% include ../world/header/header %>
+  <%- include('../world/header/header', {data: data}); %>
 
-  <section class="ftco-intro ftco-no-pb img" style="background-image: url(images/bg_3.jpg); padding: 20px !important;">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-md-10 text-center heading-section heading-section-white ftco-animate">
-          <h2 class="mb-0">Recursos en Línea</h2>
-        </div>
-      </div>
+  <section
+    style="padding: 10px; background-color: #f7f7f7; text-align: center; position: -webkit-sticky !important; position: sticky !important; top: 100px !important; z-index: 100 !important;">
+    <div>
+      <h2 class="mb-0"><b style="color: #13683b; font-size: 35px; padding-left: 15px;">Recursos en Línea</b></h2>
     </div>
   </section>
-
-  
 
   <section class="ftco-section testimony-section" style="padding-top: 30px !important;">
     <div class="container-fluid px-md-5">

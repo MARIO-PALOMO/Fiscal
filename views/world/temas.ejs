@@ -2,200 +2,146 @@
 <html lang="es">
 
 <head>
-    <% include ../world/header/links %>
+  <% include ../world/header/links %>
 </head>
 
 <body>
 
-    <% include ../world/header/header %>
+  <%- include('../world/header/header', {data: data}); %>
 
-    <section class="ftco-intro ftco-no-pb img"
-        style="background-image: url(images/bg_3.jpg); padding: 20px !important;">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-10 text-center heading-section heading-section-white ftco-animate">
-                    <h2 class="mb-0">Temas de Interés</h2>
-                </div>
+  <section
+    style="padding: 10px; background-color: #f7f7f7; text-align: center; position: -webkit-sticky !important; position: sticky !important; top: 100px !important; z-index: 100 !important;">
+    <div>
+      <h2 class="mb-0"><b style="color: #13683b; font-size: 35px; padding-left: 15px;">Temas de Interés</b></h2>
+    </div>
+  </section>
+
+
+
+  <section class="ftco-section ftco-about ftco-no-pt ftco-no-pb ftco-counter" id="section-counter">
+    <div class="container consult-wrap">
+      <br>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-9" style="line-height: 55px;">
+              TRIBUTACIÓN: 1 &nbsp;&nbsp;|&nbsp;&nbsp; CONTABILIDAD: 1 &nbsp;&nbsp;|&nbsp;&nbsp;
+              MICROEMPRESAS:
+              0 &nbsp;&nbsp;|&nbsp;&nbsp; COMPAÑIAS: 0 &nbsp;&nbsp;|&nbsp;&nbsp; R.R.H.H.: 0
+              &nbsp;&nbsp;|&nbsp;&nbsp; SIN CATEGORÍA: 0
             </div>
-        </div>
-    </section>
-
-    <section class="ftco-section ftco-about ftco-no-pt ftco-no-pb ftco-counter" id="section-counter">
-        <div class="container consult-wrap">
-            <br>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="row">
-                        <div class="col-md-9" style="line-height: 55px;">
-                            TRIBUTACIÓN: 1 &nbsp;&nbsp;|&nbsp;&nbsp; CONTABILIDAD: 1 &nbsp;&nbsp;|&nbsp;&nbsp; MICROEMPRESAS:
-                            0 &nbsp;&nbsp;|&nbsp;&nbsp; COMPAÑIAS: 0 &nbsp;&nbsp;|&nbsp;&nbsp; R.R.H.H.: 0 &nbsp;&nbsp;|&nbsp;&nbsp; SIN CATEGORÍA: 0
-                        </div>
-                        <div class="col-md-3">
-                            <input type="text" class="form-control input-sm" placeholder="Búsqueda...">
-                        </div>
-                    </div>
-                    <br>
-                </div>
-                <div class="col-md-12">
-                    <div class="card">
-                        <div class="card-body">
-                            <p>Enero 2020</p>
-                            <a class="card-title">
-                                <a href="/detalle?id=1">
-                                    <b>Tablas para liquidar Impuesto a la Renta e Impuesto a las Herencias año 2020</b>
-                                </a>
-                            </h5>
-                        </div>
-                    </div>
-                    <br>
-                </div>
-                <div class="col-md-12">
-                    <div class="card">
-                        <div class="card-body">
-                            <p>Febrero 2020</p>
-                            <a class="card-title">
-                                <a href="/detalle?id=2">
-                                    <b>Régimen Impositivo para Microempresas</b>
-                                </a>
-                            </h5>
-                        </div>
-                    </div>
-                    <br>
-                </div>
-                   <!--<div class="col-md-12">
-                    <div class="card">
-                        <div class="card-body">
-                            <p>Abril</p>
-                            <a class="card-title">
-                                <a href="/detalle?id=2">
-                                    <b>Cómo gestionar su empresa durante el Covid-19?</b>
-                                </a>
-                            </h5>
-                        </div>
-                    </div>
-                    <br>
-                </div>
-                <div class="col-md-12">
-                    <div class="card">
-                        <div class="card-body">
-                            <p>Marzo</p>
-                            <a class="card-title">
-                                <a href="/detalle?id=2">
-                                    <b>CINIIF 23, la incertidumbre frente a los tratamientos del impuesto a las
-                                        ganacias</b>
-                                </a>
-                            </h5>
-                        </div>
-                    </div>
-                    <br>
-                </div>-->
-
-                <!--<div class="col-md-12">
-                    <div class="row">
-                        <div class="col-md-6" style="line-height: 40px;">
-                            Mostrando 1 - 4 de 10
-                        </div>
-                        <div class="col-md-6 text-right">
-                            <div class="block-27">
-                                <ul>
-                                    <li><a href="#">&lt;</a></li>
-                                    <li class="active"><span>1</span></li>
-                                    <li><a href="#">2</a></li>
-                                    <li><a href="#">3</a></li>
-                                    <li><a href="#">4</a></li>
-                                    <li><a href="#">5</a></li>
-                                    <li><a href="#">&gt;</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>-->
-            </div>
-        </div>
-    </section>
-    <br>
-    <section class="ftco-intro ftco-no-pb img" style="background-image: url(images/bg_1.jpg); padding: 30px !important;">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-10 text-center heading-section heading-section-white ftco-animate">
-                    <h2 class="mb-0">Siempre obtienes la mejor orientación</h2>
-                </div>
-            </div>
-        </div>
-    </section>   
-
-    <section class="ftco-section testimony-section">
-        <div class="container-fluid px-md-5">
-          <a name="contacto"></a>
-          <div class="row justify-content-center mb-5">
-            <div class="col-md-8 text-center heading-section ftco-animate">
-              <h2 class="mb-4">Contacto</h2>
+            <div class="col-md-3">
+              <input type="text" class="form-control input-sm" placeholder="Búsqueda...">
             </div>
           </div>
-          <div class="row ftco-animate justify-content-center">
-            <div class="col-md-12">
-    
-                <div class="container">
-                    <div class="row d-flex mb-5 contact-info justify-content-center" style="color: black;">
-                      <div class="col-md-10">
-                        <div class="row mb-5">
-                          <div class="col-md-4 text-center d-flex">
-                            <div class="border w-100 p-4">
-                              <div class="icon">
-                                <span class="icon-map-o" style="font-size: 30px; color: #13683B;"></span>
-                              </div>
-                              <p><span
-                                  style="font-size: 18px; color: black;"><b>Dirección:</b></span><br><a href="#direccion">Jorge
-                                Washington
-                                E4-59 y Amazonas Edif.
-                                Rocafuerte, Of. 5, sector C.C.Espiral</a>
-                              </p>
-                            </div>
-                          </div>
-                          <div class="col-md-4 text-center d-flex">
-                            <div class="border w-100 p-4">
-                              <div class="icon">
-                                <span class="icon-tablet" style="font-size: 30px; color: #13683B"></span>
-                              </div>
-                              <p><span style="font-size: 18px;"><b>
-                                    Teléfono:</b></span><br><a href="tel:+022500610">022500610, </a><a
-                                  href="tel:+0997607812">0997607812</a></p>
-                            </div>
-                          </div>
-                          <div class="col-md-4 text-center d-flex">
-                            <div class="border w-100 p-4">
-                              <div class="icon">
-                                <span class="icon-envelope-o" style="font-size: 30px; color: #13683B"></span>
-                              </div>
-                              <p><span style="font-size: 18px;"><b>Correo Electrónico:</b></span><br>
-                                <a href="mailto:info@adcontur.com">info@adcontur.com</a></p>
-                            </div>
-                          </div>
-                        </div>
+          <br>
+        </div>
+
+
+        <% for(var i=0; i < temas.length; i++) { %>
+
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-body">
+              <p><%= temas[i].fechaAbreviada %></p>
+              <a class="card-title">
+                <a href="/detalle?idTema=<%= temas[i].idTema %>">
+                  <b><%= temas[i].titulo %></b>
+                </a>
+                </h5>
+            </div>
+          </div>
+          <br>
+        </div>
+
+        <% } %>
+
+      </div>
+    </div>
+  </section>
+  <br>
+  <section class="ftco-intro ftco-no-pb img" style="background-image: url(images/bg_1.jpg); padding: 30px !important;">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-10 text-center heading-section heading-section-white ftco-animate">
+          <h2 class="mb-0">Siempre obtienes la mejor orientación</h2>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ftco-section testimony-section">
+    <div class="container-fluid px-md-5">
+      <a name="contacto"></a>
+      <div class="row justify-content-center mb-5">
+        <div class="col-md-8 text-center heading-section ftco-animate">
+          <h2 class="mb-4">Contacto</h2>
+        </div>
+      </div>
+      <div class="row ftco-animate justify-content-center">
+        <div class="col-md-12">
+
+          <div class="container">
+            <div class="row d-flex mb-5 contact-info justify-content-center" style="color: black;">
+              <div class="col-md-10">
+                <div class="row mb-5">
+                  <div class="col-md-4 text-center d-flex">
+                    <div class="border w-100 p-4">
+                      <div class="icon">
+                        <span class="icon-map-o" style="font-size: 30px; color: #13683B;"></span>
                       </div>
-                    </div>
-                    <div class="row block-9 justify-content-center mb-5">
-                      <div class="col-md-10 mb-md-5" id="direccion">
-                        <br>
-                        <iframe
-                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.792600168622!2d-78.49863834909598!3d-0.2057302998491574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d59bc4d315f6ab%3A0x910d049c327ce1aa!2sAdcontur%20Soluciones%20Integrales!5e0!3m2!1ses-419!2sec!4v1585854670396!5m2!1ses-419!2sec"
-                          style="width: 100%; height: 600px;" frameborder="0" style="border:0;" allowfullscreen=""
-                          aria-hidden="false" tabindex="0"></iframe>
-                      </div>
+                      <p><span style="font-size: 18px; color: black;"><b>Dirección:</b></span><br><a
+                          href="#direccion">Jorge
+                          Washington
+                          E4-59 y Amazonas Edif.
+                          Rocafuerte, Of. 5, sector C.C.Espiral</a>
+                      </p>
                     </div>
                   </div>
-    
+                  <div class="col-md-4 text-center d-flex">
+                    <div class="border w-100 p-4">
+                      <div class="icon">
+                        <span class="icon-tablet" style="font-size: 30px; color: #13683B"></span>
+                      </div>
+                      <p><span style="font-size: 18px;"><b>
+                            Teléfono:</b></span><br><a href="tel:+022500610">022500610,
+                        </a><a href="tel:+0997607812">0997607812</a></p>
+                    </div>
+                  </div>
+                  <div class="col-md-4 text-center d-flex">
+                    <div class="border w-100 p-4">
+                      <div class="icon">
+                        <span class="icon-envelope-o" style="font-size: 30px; color: #13683B"></span>
+                      </div>
+                      <p><span style="font-size: 18px;"><b>Correo Electrónico:</b></span><br>
+                        <a href="mailto:info@adcontur.com">info@adcontur.com</a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row block-9 justify-content-center mb-5">
+              <div class="col-md-10 mb-md-5" id="direccion">
+                <br>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.792600168622!2d-78.49863834909598!3d-0.2057302998491574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d59bc4d315f6ab%3A0x910d049c327ce1aa!2sAdcontur%20Soluciones%20Integrales!5e0!3m2!1ses-419!2sec!4v1585854670396!5m2!1ses-419!2sec"
+                  style="width: 100%; height: 600px;" frameborder="0" style="border:0;" allowfullscreen=""
+                  aria-hidden="false" tabindex="0"></iframe>
+              </div>
             </div>
           </div>
+
         </div>
-      </section>
+      </div>
+    </div>
+  </section>
 
 
-    <% include ../world/footer/footer %>
+  <% include ../world/footer/footer %>
 
-    <% include ../world/footer/links %>
+  <% include ../world/footer/links %>
 
-    <% include ../world/footer/float %>
+  <% include ../world/footer/float %>
 
 </body>
 

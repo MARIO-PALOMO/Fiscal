@@ -7,33 +7,30 @@
 
 <body>
 
-  <% include ../world/header/header %>
+  <%- include('../world/header/header', {data: data}); %>
 
-  <section class="ftco-intro ftco-no-pb img" style="background-image: url(images/bg_3.jpg); padding: 20px !important;">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-md-10 text-center heading-section heading-section-white ftco-animate">
-          <h2 class="mb-0">Buscas Empleo</h2>
-        </div>
-      </div>
+  <section
+    style="padding: 10px; background-color: #f7f7f7; text-align: center; position: -webkit-sticky !important; position: sticky !important; top: 100px !important; z-index: 100 !important;">
+    <div>
+      <h2 class="mb-0"><b style="color: #13683b; font-size: 35px; padding-left: 15px;">Buscas Empleo</b></h2>
     </div>
   </section>
 
 
-  <section class="ftco-section testimony-section" style="background-color: #FDFDFD;" >
+  <section class="ftco-section testimony-section" style="background-color: #FDFDFD;">
     <div class="container-fluid px-md-5">
       <div class="row ftco-animate justify-content-center fadeInUp ftco-animated">
-        <div class="col-md-12">        
-          <div class="container">                      
-            <div class="row block-9 justify-content-center mb-5">                       
-              <div class="col-md-10 mb-md-5">                                         
+        <div class="col-md-12">
+          <div class="container">
+            <div class="row block-9 justify-content-center mb-5">
+              <div class="col-md-10 mb-md-5">
                 <form action="#" class="border p-5 contact-form">
-                  <div class="row">                      
+                  <div class="row">
                     <div class="col-md-12">
                       <div>
-                        <h2 style="text-align: center; font-size: 30px;">DEJA TUS DATOS:</h2> 
+                        <h2 style="text-align: center; font-size: 30px;">DEJA TUS DATOS:</h2>
                       </div>
-                    </div>                 
+                    </div>
                     <div class="col-md-12">
                       <div class="form-group">
                         <input type="text" class="form-control" placeholder="N° Identificación">
@@ -64,16 +61,17 @@
                       </div>
                     </div>
                     <div class="col-md-12">
-                      <div class="form-group">  
+                      <div class="form-group">
                         <p>¿Tienes Conocimientos de Niifs?</p>
-                        <input type="radio" name="conocimientos" value="1"> Si<br>                                        
-                        <input type="radio" name="conocimientos" value="2"> No        
+                        <input type="radio" name="conocimientos" value="1"> Si<br>
+                        <input type="radio" name="conocimientos" value="2"> No
                       </div>
                     </div>
                     <div class="col-md-12">
-                      <div class="form-group">                     
-                        <p>¿Cuantos Años de Experiencia en el Área de Impuestos y TributariaTienes Conocimientos de Niifs?</p>
-                        <input type="radio" name="experiencia" value="1"> 0-1 Años<br>                                         
+                      <div class="form-group">
+                        <p>¿Cuantos Años de Experiencia en el Área de Impuestos y TributariaTienes Conocimientos de
+                          Niifs?</p>
+                        <input type="radio" name="experiencia" value="1"> 0-1 Años<br>
                         <input type="radio" name="experiencia" value="2"> 1-5 Años<br>
                         <input type="radio" name="experiencia" value="2"> 5-10 Años<br>
                         <input type="radio" name="experiencia" value="2"> 10-En Adelante
@@ -85,18 +83,18 @@
                       </div>
                     </div>
                     <div class="col-md-12">
-                      <div class="form-group">                       
+                      <div class="form-group">
                         <p>¿Cuentas con Disponibilidad Inmediata?</p>
-                        <input type="radio" name="disponibilidad" value="1"> Si<br>                                        
-                        <input type="radio" name="disponibilidad" value="2"> No     
+                        <input type="radio" name="disponibilidad" value="1"> Si<br>
+                        <input type="radio" name="disponibilidad" value="2"> No
                       </div>
                     </div>
                     <div class="col-md-12">
-                      <div class="form-group">                     
+                      <div class="form-group">
                         <p>¿Cargo para el que aplica?</p>
-                        <input type="radio" name="experiencia" value="1"> Asistente Contable<br>                                         
+                        <input type="radio" name="experiencia" value="1"> Asistente Contable<br>
                         <input type="radio" name="experiencia" value="2"> Asistente Administrativa<br>
-                        <input type="radio" name="experiencia" value="2"> Asistente Auditoria<br>                       
+                        <input type="radio" name="experiencia" value="2"> Asistente Auditoria<br>
                       </div>
                     </div>
                     <div class="col-md-12">
@@ -160,11 +158,11 @@
                       <div class="icon">
                         <span class="icon-map-o" style="font-size: 30px; color: #13683B;"></span>
                       </div>
-                      <p><span
-                          style="font-size: 18px; color: black;"><b>Dirección:</b></span><br><a href="#direccion">Jorge
-                        Washington
-                        E4-59 y Amazonas Edif.
-                        Rocafuerte, Of. 5, sector C.C.Espiral</a>
+                      <p><span style="font-size: 18px; color: black;"><b>Dirección:</b></span><br><a
+                          href="#direccion">Jorge
+                          Washington
+                          E4-59 y Amazonas Edif.
+                          Rocafuerte, Of. 5, sector C.C.Espiral</a>
                       </p>
                     </div>
                   </div>

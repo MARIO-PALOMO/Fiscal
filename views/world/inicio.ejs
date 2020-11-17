@@ -80,12 +80,15 @@
               <div>
                 <b>TEMAS DE INTERÉS</b>
               </div>
+
+              <% for(var i=0; i < temas.length; i++) { %>
+
               <div>
-                <a href="" style="color: #fff;">* <span>Tabla impuesto a la renta</span></a>
+                <a href="/detalle?idTema=<%= temas[i].idTema %>" style="color: #fff;">*
+                  <span><%= temas[i].titulo %></span></a>
               </div>
-              <div>
-                <a href="" style="color: #fff;">* <span>Ley Microempresas</span></a>
-              </div>
+
+              <% } %>
 
             </div>
             <br>
@@ -99,14 +102,29 @@
               <div>
                 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                   <div class="carousel-inner">
+
+                    <% for(var i=0; i < data.length; i++) { %>
+
+
+                    <% if(i == 0){ %>
+
                     <div class="carousel-item active">
-                      <b>CONTABILIDAD</b><br>
-                      <span>Este servicio consiste en proporcionar asesoría a las compañías y personas...</span>
+                      <b><%= data[i].titulo %></b><br>
+                      <span><%= data[i].descripcion_corta2 %></span>
                     </div>
+
+                    <% } else{ %>
+
                     <div class="carousel-item">
-                      <b>IMPUESTOS</b><br>
-                      <span>Con la información recibida, se elaboran las declaraciones que correspondan a...</span>
+                      <b><%= data[i].titulo %></b><br>
+                      <span><%= data[i].descripcion_corta2 %></span>
                     </div>
+
+                    <% } %>
+
+                    <% } %>
+
+
                   </div>
                   <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -876,27 +894,15 @@
         <div class="row">
           <div class="col-md-4">
 
-            <!--PRICE CONTENT START-->
             <div class="generic_content clearfix"
               style="background-color: #fcfcfc; border: 1px solid #fcfcfc !important; border-radius: 0.45rem !important; border-bottom: 1px solid #d6d6d6 !important; border-left: 1px solid #d6d6d6 !important; border-right: 1px solid #d6d6d6 !important;">
-
-              <!--HEAD PRICE DETAIL START-->
               <div class="generic_head_price clearfix">
-
-                <!--HEAD CONTENT START-->
                 <div class="generic_head_content clearfix">
-
-                  <!--HEAD START-->
                   <div class="head_bg"></div>
                   <div class="head">
                     <span style="font-size: 17px !important;">PN NO OBLIGADAS</span>
                   </div>
-                  <!--//HEAD END-->
-
                 </div>
-                <!--//HEAD CONTENT END-->
-
-                <!--PRICE START-->
                 <div class="generic_price_tag clearfix">
                   <span class="price">
                     <span class="sign">$</span>
@@ -905,18 +911,10 @@
                     <span class="month">/MEN</span>
                   </span>
                 </div>
-                <!--//PRICE END-->
-
-                <!--BUTTON START-->
-                <div class="generic_price_btn clearfix">
+                <div class="generic_price_btn clearfix" id="btnPlan1" style="cursor: pointer;">
                   <a class="">Cotizar Plan</a>
                 </div>
-                <!--//BUTTON END-->
-
               </div>
-              <!--//HEAD PRICE DETAIL END-->
-
-              <!--FEATURE LIST START-->
               <div class="generic_feature_list">
                 <ul>
                   <li>Declaración Iva Mensual </li>
@@ -928,11 +926,7 @@
                   <li><span>24/7</span> Soporte</li>
                 </ul>
               </div>
-              <!--//FEATURE LIST END-->
-
             </div>
-            <!--//PRICE CONTENT END-->
-
           </div>
 
           <div class="col-md-4">
@@ -969,7 +963,7 @@
                 <!--//PRICE END-->
 
                 <!--BUTTON START-->
-                <div class="generic_price_btn clearfix">
+                <div class="generic_price_btn clearfix" id="btnPlan2" style="cursor: pointer;">
                   <a class="">Cotizar Plan</a>
                 </div>
                 <!--//BUTTON END-->
@@ -1031,7 +1025,7 @@
                 <!--//PRICE END-->
 
                 <!--BUTTON START-->
-                <div class="generic_price_btn clearfix">
+                <div class="generic_price_btn clearfix" id="btnPlan3" style="cursor: pointer;">
                   <a class="">Cotizar Plan</a>
                 </div>
                 <!--//BUTTON END-->
@@ -1135,6 +1129,71 @@
     </div>
   </section>
 
+  <div class="modal fade" id="modalPlanes" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalCenterTitle">Deja tus Datos</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="N° Identificación" id="identificacion">
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Nombre Completo" id="nombre">
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Correo Electrónico" id="email">
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Dirección" id="direccion">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Teléfono" id="telefono">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <b>Plan:</b> <span id="plan"></span>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <b>Precio:</b> <span id="precio"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary py-3 px-5" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary py-3 px-5">Solicitar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <% include ../world/footer/footer %>
 
   <% include ../world/footer/links %>
@@ -1142,6 +1201,31 @@
 
   <% include ../world/footer/float %>
 
+  <script>
+
+    var plan = 0;
+    $("#btnPlan1").click(function () {
+      plan = { "nombre": "PN NO OBLIGADAS", "precio": "09.99" };
+      $("#plan").html(plan.nombre);
+      $("#precio").html(plan.precio);
+      $('#modalPlanes').modal('toggle');
+    });
+
+    $("#btnPlan2").click(function () {
+      plan = { "nombre": "PROFESIONALES Y PN OBLIGADAS", "precio": "99.99" };
+      $("#plan").html(plan.nombre);
+      $("#precio").html(plan.precio);
+      $('#modalPlanes').modal('toggle');
+    });
+
+    $("#btnPlan3").click(function () {
+      plan = { "nombre": "PEQUEÑA Y MEDIANA EMPRESA", "precio": "149.99" };
+      $("#plan").html(plan.nombre);
+      $("#precio").html(plan.precio);
+      $('#modalPlanes').modal('toggle');
+    });
+
+  </script>
 
 </body>
 
