@@ -198,12 +198,13 @@
                   Ética</a>
               </li>
             </ul>
-            <div class="tab-content bg-light rounded mt-2">
+            <div class="tab-content bg-light rounded mt-2" style="border: 2px solid #13683b !important">
               <div class="tab-pane container p-0 active" id="home1">
                 <p style="text-align: justify;">
-                  Ofrecer a nuestros clientes servicios profesionales, asegurando el cumplimiento de
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ofrecer a nuestros clientes servicios profesionales,
+                  asegurando el cumplimiento de
                   normas y reglamentos preestablecidos en la legislación ecuatoriana en el campo
-                  Contable,Tributario y Administrativo. Enfocados siempre en la entrega de soluciones
+                  Contable,Tributario y Administrativo.<br><br>Enfocados siempre en la entrega de soluciones
                   viables, competitivas e innovadoras. Contamos con el mejor Equipo de Profesionales,
                   para
                   nosotros cada uno de Nuestros Clientes son importantes, por eso nuestra atención
@@ -212,7 +213,8 @@
               </div>
               <div class="tab-pane container p-0 fade" id="home2">
                 <p style="text-align: justify;">
-                  Ser reconocidos en el mediano plazo por nuestros clientes como un socio estratégico
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ser reconocidos en el mediano plazo por nuestros
+                  clientes como un socio estratégico
                   para la toma de decisiones a través de: <br><br>
 
                   • Confiabilidad y exactitud en nuestros servicios<br>
@@ -1133,19 +1135,12 @@
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalCenterTitle">Deja tus Datos</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
+        <div class="modal-body" style="padding: 50px !important;">
+
+          <h4>Ayúdanos con estos datos</h4>
+          <p>Estas a un paso de transformar tus finanzas.</p>
+
           <div class="row">
-            <div class="col-md-12">
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="N° Identificación" id="identificacion">
-              </div>
-            </div>
             <div class="col-md-12">
               <div class="form-group">
                 <input type="text" class="form-control" placeholder="Nombre Completo" id="nombre">
@@ -1157,42 +1152,36 @@
               </div>
             </div>
             <div class="col-md-12">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Dirección" id="direccion">
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Teléfono" id="telefono">
-                  </div>
-                </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Teléfono" id="telefono">
               </div>
             </div>
             <div class="col-md-12">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <b>Plan:</b> <span id="plan"></span>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <b>Precio:</b> <span id="precio"></span>
-                  </div>
-                </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Ventas Aproximadas al Mes" id="ventas">
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Compras Aproximadas al Mes" id="compras">
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Empleados Afilidaos" id="afiliados">
               </div>
             </div>
           </div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary py-3 px-5" data-dismiss="modal">Cancelar</button>
-          <button type="button" class="btn btn-primary py-3 px-5">Solicitar</button>
+          <button type="button" class="btn btn-primary py-3 px-5" id="btnSolicitar">Solicitar</button>
         </div>
       </div>
     </div>
   </div>
+
+  <div id="loader" class="">Loading&#8230;</div>
 
   <% include ../world/footer/footer %>
 
@@ -1224,6 +1213,57 @@
       $("#precio").html(plan.precio);
       $('#modalPlanes').modal('toggle');
     });
+
+
+    $("#btnSolicitar").click(function () {
+      enviarEmail(plan.nombre, plan.precio);
+    });
+
+    function enviarEmail(plan, precio) {
+
+      var data = {
+        tipo: 1,
+        asunto: 'SOLICITUD COMPRA PLAN DE SERVICIOS | ' + plan,
+        nombre: $("#nombre").val(),
+        plan: plan,
+        precio: precio,
+        email: $("#email").val(),
+        telefono: $("#telefono").val(),
+        ventas: $("#ventas").val(),
+        compras: $("#compras").val(),
+        afiliados: $("#afiliados").val()
+      }
+
+      $("#loader").addClass("loading");
+
+      $.ajax({
+        url: '/enviarEmail',
+        type: 'POST',
+        data: data,
+        success: function (res) {
+
+          $("#loader").removeClass("loading").addClass("noloading");
+          $('#modalPlanes').modal('toggle');
+
+          Swal.fire({
+            icon: 'success',
+            title: 'Éxito',
+            text: 'Se envió la solicitud de compra, en un momento un agente se contactará con usted.'
+          });
+
+        }, error: function (xhr, status) {
+          $("#loader").removeClass("loading").addClass("noloading");
+          $('#modalPlanes').modal('toggle');
+          
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Ocurrio un problema, intente nuevamente mas tarde.'
+          });
+
+        }
+      });
+    }
 
   </script>
 

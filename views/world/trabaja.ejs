@@ -24,7 +24,7 @@
           <div class="container">
             <div class="row block-9 justify-content-center mb-5">
               <div class="col-md-10 mb-md-5">
-                <form action="#" class="border p-5 contact-form">
+                <form id="fmrCurriculum" enctype="multipart/form-data" class="border p-5 contact-form">
                   <div class="row">
                     <div class="col-md-12">
                       <div>
@@ -33,29 +33,29 @@
                     </div>
                     <div class="col-md-12">
                       <div class="form-group">
-                        <input type="text" class="form-control" placeholder="N° Identificación">
+                        <input type="text" class="form-control" placeholder="N° Identificación" name="identificacion">
                       </div>
                     </div>
                     <div class="col-md-12">
                       <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Nombre Completo">
+                        <input type="text" class="form-control" placeholder="Nombre Completo" name="nombre">
                       </div>
                     </div>
                     <div class="col-md-12">
                       <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Correo Electrónico">
+                        <input type="text" class="form-control" placeholder="Correo Electrónico" name="email">
                       </div>
                     </div>
                     <div class="col-md-12">
                       <div class="row">
                         <div class="col-md-6">
                           <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Dirección">
+                            <input type="text" class="form-control" placeholder="Dirección" name="direccion">
                           </div>
                         </div>
                         <div class="col-md-6">
                           <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Teléfono">
+                            <input type="text" class="form-control" placeholder="Teléfono" name="telefono">
                           </div>
                         </div>
                       </div>
@@ -63,57 +63,51 @@
                     <div class="col-md-12">
                       <div class="form-group">
                         <p>¿Tienes Conocimientos de Niifs?</p>
-                        <input type="radio" name="conocimientos" value="1"> Si<br>
-                        <input type="radio" name="conocimientos" value="2"> No
+                        <input type="radio" name="conocimientos" value="Si"> Si<br>
+                        <input type="radio" name="conocimientos" value="No"> No
                       </div>
                     </div>
                     <div class="col-md-12">
                       <div class="form-group">
-                        <p>¿Cuantos Años de Experiencia en el Área de Impuestos y TributariaTienes Conocimientos de
-                          Niifs?</p>
-                        <input type="radio" name="experiencia" value="1"> 0-1 Años<br>
-                        <input type="radio" name="experiencia" value="2"> 1-5 Años<br>
-                        <input type="radio" name="experiencia" value="2"> 5-10 Años<br>
-                        <input type="radio" name="experiencia" value="2"> 10-En Adelante
+                        <p>¿Cuantos Años de Experiencia en el Área de Impuestos y Tributaria?</p>
+                        <input type="radio" name="experiencia" value="0-1 Años"> 0-1 Años<br>
+                        <input type="radio" name="experiencia" value="1-5 Años"> 1-5 Años<br>
+                        <input type="radio" name="experiencia" value="5-10 Años"> 5-10 Años<br>
+                        <input type="radio" name="experiencia" value="10-En Adelante"> 10-En Adelante
                       </div>
                     </div>
                     <div class="col-md-12">
                       <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Cuál es tu Aspiración Salarial">
+                        <input type="text" class="form-control" placeholder="Cuál es tu Aspiración Salarial"
+                          name="salario">
                       </div>
                     </div>
                     <div class="col-md-12">
                       <div class="form-group">
                         <p>¿Cuentas con Disponibilidad Inmediata?</p>
-                        <input type="radio" name="disponibilidad" value="1"> Si<br>
-                        <input type="radio" name="disponibilidad" value="2"> No
+                        <input type="radio" name="disponibilidad" value="Si"> Si<br>
+                        <input type="radio" name="disponibilidad" value="No"> No
                       </div>
                     </div>
                     <div class="col-md-12">
                       <div class="form-group">
                         <p>¿Cargo para el que aplica?</p>
-                        <input type="radio" name="experiencia" value="1"> Asistente Contable<br>
-                        <input type="radio" name="experiencia" value="2"> Asistente Administrativa<br>
-                        <input type="radio" name="experiencia" value="2"> Asistente Auditoria<br>
+                        <input type="radio" name="cargo" value="Asistente Contable"> Asistente Contable<br>
+                        <input type="radio" name="cargo" value="Asistente Administrativa"> Asistente Administrativa<br>
+                        <input type="radio" name="cargo" value="Asistente Auditoria"> Asistente Auditoria<br>
                       </div>
                     </div>
                     <div class="col-md-12">
-                      <div class="input-group mb-3">
-                        <div class="input-group-prepend" style="height: 52px !important;">
-                          <span class="input-group-text">Subir</span>
-                        </div>
-                        <div class="custom-file" style="height: 52px !important;">
-                          <input type="file" class="custom-file-input" id="inputGroupFile01"
-                            style="height: 52px !important;">
-                          <label class="custom-file-label" for="inputGroupFile01"
-                            style="height: 52px !important; line-height: 35px;">Curriculum</label>
-                        </div>
+                      <div class="form-group">
+                        <span>Currículum</span>
+                        <input type="file" class="form-control" placeholder="Currículum" name="file"
+                          accept="application/pdf">
                       </div>
                     </div>
                     <div class="col-md-12">
                       <br>
                       <div class="form-group">
-                        <input type="submit" value="Enviar Formulario" class="btn btn-primary py-3 px-5">
+                        <input type="submit" value="Enviar Formulario" class="btn btn-primary py-3 px-5" id="btnEnviar">
                       </div>
                     </div>
                   </div>
@@ -203,13 +197,57 @@
       </div>
     </div>
   </section>
-
+  <div id="loader" class="">Loading&#8230;</div>
 
   <% include ../world/footer/footer %>
 
   <% include ../world/footer/links %>
 
   <% include ../world/footer/float %>
+
+  <script>
+
+    $("#btnEnviar").click(function () {
+      event.preventDefault();
+
+      var form = $('#fmrCurriculum')[0];
+      var data = new FormData(form);
+
+      $("#loader").addClass("loading");
+
+      $.ajax({
+        type: 'POST',
+        enctype: 'multipart/form-data',
+        url: '/enviarEmailCurriculum',
+        data: data,
+        processData: false,
+        contentType: false,
+        cache: false,
+        success: function (res) {
+
+          $("#loader").removeClass("loading").addClass("noloading");
+
+          Swal.fire({
+            icon: 'success',
+            title: 'Éxito',
+            text: 'Se envió la solicitud de empleo.'
+          });
+
+        }, error: function (xhr, status) {
+          $("#loader").removeClass("loading").addClass("noloading");
+
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Ocurrio un problema, intente nuevamente mas tarde.'
+          });
+
+        }
+      });
+
+    });
+
+  </script>
 
 </body>
 

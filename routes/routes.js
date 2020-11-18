@@ -2,6 +2,26 @@ var express = require('express');
 var router = express.Router();
 var controller = require('../controllers');
 
+var multer = require('multer');
+var FTPStorage = require('multer-ftp');
+
+var storage = new FTPStorage({
+  basepath: '/public_html/archivos',
+  ftp: {
+    host: 'adcontur.com',
+    secure: false,
+    user: 'admin@adcontur.com',
+    password: 'O9Fn=N5BRYZ*',
+    port: 21
+  },
+  destination: function (req, file, options, callback) {
+    callback(null, options.basepath + "/curriculum-" + Date.now() + "-" + file.originalname)
+  }
+});
+
+var upload = multer({ storage: storage });
+
+router.post('/enviarEmailCurriculum', upload.single('file'), controller.email.enviarEmailCurriculum);
 
 //router.post('/gestionServicio', controller.user.gestionServicio);
 
@@ -25,5 +45,7 @@ router.get('/linea', controller.recursos_linea.listarRecursosLinea);
 router.get('/linea', function (req, res, next) {
   res.render('world/linea', { tema: req.query.id });
 });
+
+router.post('/enviarEmail', controller.email.enviarEmail);
 
 module.exports = router;
