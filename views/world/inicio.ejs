@@ -168,7 +168,7 @@
           <div class="heading-section mb-4">
             <h2>ADCONTUR ACP</h2>
           </div>
-          <p style="text-align: justify;">
+          <p style="text-align: justify; border: 2px solid #13683b !important; padding: 20px; border-radius: 4px;">
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Adcontur Soluciones Contables, Tributarias y
             Administrativas.- Somos una empresa orgullosamente
             ecuatoriana pioneros en brindar soluciones Contables, Tributarias y Administrativas, contamos
@@ -1252,6 +1252,8 @@
           });
 
         }, error: function (xhr, status) {
+          console.log(xhr);
+          console.log(status);
           $("#loader").removeClass("loading").addClass("noloading");
           $('#modalPlanes').modal('toggle');
           
