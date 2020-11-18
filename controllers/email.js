@@ -2,7 +2,7 @@ var mysql = require("mysql");
 var config = require(".././database/database.js");
 var urls = require(".././environments/environment.js");
 var mail = require('nodemailer');
-
+var smtpTransport = require('nodemailer-smtp-transport');
 var email_plan = require("../template/email_plan");
 var email_curriculum = require("../template/email_curriculum");
 
@@ -24,7 +24,7 @@ module.exports = {
       } else {
         var result = rows[0];
 
-        let credenciales = mail.createTransport({
+        let credenciales = mail.createTransport(smtpTransport({
           host: result.host,
           port: result.port,
           secure: false,
@@ -32,10 +32,10 @@ module.exports = {
             user: result.email,
             pass: result.password
           }
-        });
+        }));
 
         let opciones = {
-          to: result.emailRecepcion,
+          to: "info@adcontur.com",
           subject: req.body.asunto,
           html: req.body.tipo == 1 ? email_plan.email_plan(req.body.nombre, req.body.plan, req.body.precio, req.body.email, req.body.telefono, req.body.ventas, req.body.compras, req.body.afiliados) : ''
         };
@@ -65,7 +65,7 @@ module.exports = {
       } else {
         var result = rows[0];
 
-        let credenciales = mail.createTransport({
+        let credenciales = mail.createTransport(smtpTransport({
           host: result.host,
           port: result.port,
           secure: false,
@@ -73,7 +73,7 @@ module.exports = {
             user: result.email,
             pass: result.password
           }
-        });
+        }));
 
         var path = req.file.path;
         var direccion = path.replace("/public_html", "");
@@ -82,7 +82,7 @@ module.exports = {
         console.log(direccion);
 
         let opciones = {
-          to: result.emailRecepcion,
+          to: "empleos@adcontur.com",
           subject: "SOLICITUD TRABAJA CONMIGO",
           html: email_curriculum.email_curriculum(req.body.identificacion, req.body.nombre, req.body.email, req.body.direccion, req.body.telefono, req.body.conocimientos, req.body.experiencia, req.body.salario, req.body.disponibilidad, req.body.cargo),
           attachments: [{
