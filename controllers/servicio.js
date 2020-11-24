@@ -65,7 +65,26 @@ module.exports = {
         });
       }
     });
+  },
 
+  listarServicioComplemento: function (req, res, next) {
+    pool.query('SELECT * FROM servicio ORDER BY orden ASC', function (err, rows, fields) {
+      if (err) {
+        console.log(err);
+        res.status(500).send({ 'resultado': 5 });
+      } else {
+        var result = rows;
+        pool.query('SELECT * FROM servicio WHERE idServicio = ?', [req.query.idServicio], function (err2, rows2, fields) {
+          if (err2) {
+            console.log(err2);
+            res.status(500).send({ 'resultado': 5 });
+          } else {
+            var result2 = rows2[0];
+            res.send(result2);
+          }
+        });
+      }
+    });
   },
 
 }

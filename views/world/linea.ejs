@@ -74,6 +74,16 @@
 <body>
 
   <%- include('../world/header/header', {data: data}); %>
+  <style>
+    .puntos li::before {
+      content: "\2022";
+      color: #13683b;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+  </style>
 
   <section
     style="padding: 10px; background-color: #f7f7f7; text-align: center; position: -webkit-sticky !important; position: sticky !important; top: 100px !important; z-index: 100 !important;">
@@ -82,374 +92,72 @@
     </div>
   </section>
 
-  <section class="ftco-section testimony-section" style="padding-top: 30px !important;">
-    <div class="container-fluid px-md-5">
-      <div class="row ftco-animate justify-content-center fadeInUp ftco-animated">
-        <div class="col-md-12">
-          <div class="container">
-            <div class="row block-9 justify-content-center mb-5">
+  <section class="ftco-section ftco-no-pt"
+    style="background-color: #FDFDFD !important; padding-bottom: 50px !important;">
+    <div class="container">
+      <div class="row tabulation mt-4 ftco-animate">
 
-              <div class="col-md-12" style="padding: 50px;">
-                <img src="images/contruccion.png" style="width: 100%;">
-              </div>
+        <div class="col-md-7"
+          style="padding: 25px; border: 2px solid #13683b !important; border-radius: 0.45rem !important; background-image: url('images/fondoServicios.jpg');background-size: cover; color: #000000 !important;">
 
-              <!--
-
-              <div class="col-md-8">
-                <div class="tabulation-2 mt-4 accordion" id="accordionExample">
-
-
-                  <div class="card">
-                    <div class="card-header" id="headingService"
-                      style="background-color: #13683B; color: #fff; font-size: 15px;" data-toggle="collapse"
-                      data-target="#collapseService" aria-expanded="false" aria-controls="collapseService">
-                      Servicios
-                    </div>
-                    <div id="collapseService" class="collapse show" aria-labelledby="headingService"
-                      data-parent="#accordionExample">
-                      <div class="card-body">
-                        <div class="row">
-                          <div class="col-md-12" style="padding: 30px;">
-                            <hr>
-                          </div>
-               
-                          <div class="col-md-6">
-
-                            <b data-toggle="collapse" data-target="#sri" style="cursor: pointer;"
-                              aria-describedby="tooltip">Servicios SRI
-                            </b>
-
-                            <hr>
-                            <div id="sri" class="collapse">
-                              <ul style="cursor: pointer;">
-                                <li>Complemento 1</li>
-                                <li>Complemento 2</li>
-                                <li>Complemento 3</li>
-                                <li>Complemento 4</li>
-                                <li>Complemento 5</li>
-                              </ul>
-                            </div>
-                          </div>
-                          <div class="col-md-6">
-                            <b data-toggle="collapse" data-target="#iess" style="cursor: pointer;">Servicios IESS</b>
-                            <hr>
-                            <div id="iess" class="collapse">
-                              <ul style="cursor: pointer;">
-                                <li>Complemento 1</li>
-                                <li>Complemento 2</li>
-                                <li>Complemento 3</li>
-                                <li>Complemento 4</li>
-                                <li>Complemento 5</li>
-                              </ul>
-                            </div>
-                          </div>
-                          <div class="col-md-6">
-                            <b data-toggle="collapse" data-target="#mrl" style="cursor: pointer;">Servicios MRL</b>
-                            <hr>
-                            <div id="mrl" class="collapse">
-                              <ul style="cursor: pointer;">
-                                <li>Complemento 1</li>
-                                <li>Complemento 2</li>
-                                <li>Complemento 3</li>
-                                <li>Complemento 4</li>
-                                <li>Complemento 5</li>
-                              </ul>
-                            </div>
-                          </div>
-                          <div class="col-md-6">
-                            <b data-toggle="collapse" data-target="#sic" style="cursor: pointer;">Servicios
-                              Superintendencia de Compañías</b>
-                            <hr>
-                            <div id="sic" class="collapse">
-                              <ul style="cursor: pointer;">
-                                <li>Complemento 1</li>
-                                <li>Complemento 2</li>
-                                <li>Complemento 3</li>
-                                <li>Complemento 4</li>
-                                <li>Complemento 5</li>
-                              </ul>
-                            </div>
-                          </div>
-                          <div class="col-md-6">
-                            <b data-toggle="collapse" data-target="#municipio" style="cursor: pointer;">Servicios
-                              Municipio</b>
-                            <hr>
-                            <div id="municipio" class="collapse">
-                              <ul style="cursor: pointer;">
-                                <li>Complemento 1</li>
-                                <li>Complemento 2</li>
-                                <li>Complemento 3</li>
-                                <li>Complemento 4</li>
-                                <li>Complemento 5</li>
-                              </ul>
-                            </div>
-                          </div>
-                          <div class="col-md-6">
-                            <b data-toggle="collapse" data-target="#otros" style="cursor: pointer;">Otros Servicios</b>
-                            <hr>
-                            <div id="otros" class="collapse">
-                              <ul style="cursor: pointer;">
-                                <li>Complemento 1</li>
-                                <li>Complemento 2</li>
-                                <li>Complemento 3</li>
-                                <li>Complemento 4</li>
-                                <li>Complemento 5</li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-
-                  <div class="card">
-                    <div class="card-header" id="headingTwo"
-                      style="background-color: #13683B; color: #fff; font-size: 15px;" data-toggle="collapse"
-                      data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                      Planes
-                    </div>
-                    <div id="collapseTwo" class="collapse " aria-labelledby="headingTwo"
-                      data-parent="#accordionExample">
-                      <div class="card-body">
-                        <div class="row">
-                          <div class="col-md-4">
-                            <div class="columns">
-                              <ul class="price">
-                                <li class="header" style="background-color:chartreuse">PYME</li>
-                                <li class="grey">25 USD/Mes</li>
-                                <li class="grey" style="font-size: 15px;">10% de descuento en pago anual</li>
-                                <li>100 facturas de ventas mensuales</li>
-                                <li>2 usuarios con acceso</li>
-                                <li>2 Bodegas de inventario</li>
-                                <li>POS*</li>
-                                <li>Adjunta hasta 20.000 archivos</li>
-                                <li>N/A</li>
-                                <li>N/A</li><br>
-                                <li class="grey">
-                                  <input type="submit" value="ELEGIR PLAN" class="btn btn-primary px-5 btn-block"
-                                    style="height: 48px !important; font-size: 12px;">
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                          <div class="col-md-4">
-                            <div class="columns">
-                              <ul class="price">
-                                <li class="header" style="background-color:blue">PRO</li>
-                                <li class="grey">45 USD/Mes</li>
-                                <li class="grey" style="font-size: 15px;">10% de descuento en pago anual</li>
-                                <li>500 facturas de ventas mensuales</li>
-                                <li>3 usuarios con acceso</li>
-                                <li>10 Bodegas de inventario</li>
-                                <li>POS*</li>
-                                <li>Adjunta hasta 20.000 archivos</li>
-                                <li>Multimoneda</li>
-                                <li>Integración con otras aplicaciones</li>
-                                <li class="grey">
-                                  <input type="submit" value="ELEGIR PLAN" class="btn btn-primary px-5 btn-block"
-                                    style="height: 48px !important; font-size: 12px;">
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                          <div class="col-md-4">
-                            <div class="columns">
-                              <ul class="price">
-                                <li class="header" style="background-color:slateblue">PLUS</li>
-                                <li class="grey">85 USD/Mes</li>
-                                <li class="grey" style="font-size: 15px;">10% de descuento en pago anual</li>
-                                <li>2.500 facturas de ventas mensuales</li>
-                                <li>4 usuarios con acceso</li>
-                                <li>100 Bodegas de inventario</li>
-                                <li>POS ventas ilimi.</li>
-                                <li>Adjunta hasta 20.000 archivos</li>
-                                <li>Multimoneda</li>
-                                <li>Integración con otras aplicaciones</li>
-                                <li class="grey">
-                                  <input type="submit" value="ELEGIR PLAN" class="btn btn-primary px-5 btn-block"
-                                    style="height: 48px !important; font-size: 12px;">
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-
-                  <div class="card">
-                    <div class="card-header" id="headingOne"
-                      style="background-color: #13683B; color: #fff; font-size: 15px;" data-toggle="collapse"
-                      data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                      Catastro | Consulta Microempresas
-                    </div>
-
-                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                      <div class="card-body">
-                        <div class="row">
-                          <div class="col-md-12">
-                            <div class="form-group">
-                              <b>R.U.C: </b>
-                              <input type="text" id="ruc" class="form-control" placeholder="Ingresar el R.U.C">
-                            </div>
-                            <div class="form-group" style="float: right;">
-                              <input type="submit" id="btnRuc" value="Consultar" class="btn btn-primary px-5"
-                                style="height: 48px !important;">
-                              <input type="submit" id="btnReset" value="Limpiar" class="btn btn-primary px-5"
-                                style="height: 48px !important;">
-
-                            </div>
-                          </div>
-                        </div>
-
-                        <div id="detalleRuc" class="row" style="color: #000000;">
-                          <div class="col-md-12">
-                            <hr>
-                          </div>
-                          <div class="col-md-12">
-                            <div style="text-align: justify;">El ruc <strong>1709568693001</strong> con razon social
-                              <strong>FLORES ARIAS
-                                MARCELA INES</strong>, <strong class="text-danger">SI</strong> esta catalogada como
-                              MICROEMPRESA con fecha 27-01-2020, segun catastro del SRI publicado el 24-04-2020.</div>
-                            <br>
-                          </div>
-                          <div class="col-md-12">
-                            <div style="color: #13683B; font-weight: bold;">Si eres OBLIGADO A LLEVAR CONTABILIDAD tus
-                              cambios son:</div>
-                            <ol>
-                              <li>Pago anual del 2% como impuesto a la renta del valor de los ingresos brutos</li>
-                              <li>No es agente de retencion salvo en los siguientes casos:
-                                <div>
-                                  <div>■ Importacion de servicios</div>
-                                  <div>■ Anticipo o pago de dividendos</div>
-                                  <div>■ Emision de Liquidacion de Bienes y Servicios</div>
-                                  <div>■ Enajenacion de acciones</div>
-                                  <div>■ Empleados en relacion de dependencia</div>
-                                </div>
-                              </li>
-                              <li>Si realiza alguna retencion de los casos especiales debe declararla en el mes que
-                                lo realice.</li>
-                              <li>Presentar declaracion de IVA de forma SEMESTRAL, debe liquidar y pagar el IVA.</li>
-                            </ol>
-                            <ul style="list-style: none;">
-                              <li><b>DEBERES FORMALES</b>
-                                <div>
-                                  <div>■ Emitir comprobantes de venta por sus ingresos</div>
-                                  <div>■ Recibir comprobates de venta que sustenten sus costos y gastos</div>
-                                  <div>■ Llevar contabilidad</div>
-                                </div>
-                              </li>
-                              <li>&nbsp;</li>
-                              <li><b>NOTAS</b>
-                                <div>
-                                  <div>■ Los contribuyentes que esten dentro del catastro de MICROEMPRESAS si son
-                                    sujetos de retencion tanto del IVA como de la RENTA</div>
-                                  <div>■ Si has sido catalogado como MICROEMPRESA estaras en este regimen por 5 años
-                                  </div>
-                                  <div>■ Si consideras que no debes estar catalogado como MICROEMPRESA debes rapidamente
-                                    ingresar un oficio al SRI solicitando la exclusion</div>
-                                </div>
-                              </li>
-                            </ul>
-                          </div>
-                          <div class="col-md-12">
-                            <div style="color: #13683B; font-weight: bold;">Si eres NO OBLIGADO tus cambios son:</div>
-                            <ol>
-                              <li>Pago anual del 2% como impuesto a la renta del valor de los ingresos brutos</li>
-                              <li>Presentar declaracion de IVA de forma SEMESTRAL, debe liquidar y pagar el IVA.</li>
-                            </ol>
-                            <ul style="list-style: none;">
-                              <li><b>DEBERES FORMALES</b>
-                                <div>
-                                  <div>■ Emitir comprobantes de venta por sus ingresos</div>
-                                  <div>■ Recibir comprobates de venta que sustenten sus costos y gastos</div>
-                                  <div>■ Mantener registro de ingresos y gastos</div>
-                                </div>
-                              </li>
-                              <li>&nbsp;</li>
-                              <li><b>NOTAS</b>
-                                <div>
-                                  <div>■ Los contribuyentes que esten dentro del catastro de MICROEMPRESAS si son
-                                    sujetos de retencion tanto del IVA como de la RENTA</div>
-                                  <div>■ Si has sido catalogado como MICROEMPRESA estaras en este regimen por 5 años
-                                  </div>
-                                  <div>■ Si consideras que no debes estar catalogado como MICROEMPRESA debes rapidamente
-                                    ingresar un oficio al SRI solicitando la exclusión</div>
-                                </div>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="tabulation-2 mt-4">
-                  <ul class="nav nav-pills nav-fill d-md-flex d-block">
-                    <li class="nav-item">
-                      <a class="nav-link active py-2" data-toggle="tab" href="#home1"><span
-                          class="ion-ios-person mr-2"></span>
-                        Registrate
-                      </a>
-                    </li>
-                    <li class="nav-item px-lg-2">
-                      <a class="nav-link py-2" data-toggle="tab" href="#home2"><span class="ion-ios-home mr-2"></span>
-                        Inicia Sesión
-                      </a>
-                    </li>
-                  </ul>
-                  <div class="tab-content bg-light rounded mt-2">
-                    <div class="tab-pane container p-0 active" id="home1">
-                      <br>
-                      <div class="form-group">
-                        <b>Correo Electrónico: </b>
-                        <input type="text" class="form-control" placeholder="Ingresar Correo Electrónico">
-                      </div>
-                      <div class="form-group">
-                        <b>Contraseña: </b>
-                        <input type="password" class="form-control" placeholder="Ingresar Contraseña">
-                      </div>
-                      <div class="form-group">
-                        <b>Confirmar Contraseña: </b>
-                        <input type="password" class="form-control" placeholder="Ingresar Nuevamente Contraseña">
-                      </div>
-                      <br>
-                      <div class="form-group">
-                        <input type="submit" value="Registrate" class="btn btn-primary px-5 btn-block"
-                          style="height: 48px !important;">
-                      </div>
-                    </div>
-                    <div class="tab-pane container p-0 fade" id="home2">
-                      <br>
-                      <div class="form-group">
-                        <b>Correo Electrónico: </b>
-                        <input type="text" class="form-control" placeholder="Ingresar Correo Electrónico">
-                      </div>
-                      <div class="form-group">
-                        <b>Contraseña: </b>
-                        <input type="password" class="form-control" placeholder="Ingresar Contraseña">
-                      </div>
-                      <br>
-                      <div class="form-group">
-                        <input type="submit" value="Ingresa" class="btn btn-primary px-5 btn-block"
-                          style="height: 48px !important;">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              -->
-
-            </div>
+          <div style="text-align: justify;">
+            Este servicio le ofrece un conjunto de recursos necesarios para el Departamento Contable, para poner su
+            contabilidad al día y a la vez, eliminar y prevenir posibles situaciones por retraso contable.
+            <br><br>
+            Recuros en línea:
+            <br>
+            <ul class="puntos">
+              <li>
+                <a href="#" style="font-size: 15px !important;">Recursos en línea SRI</a>
+              </li>
+              <li>
+                <a href="#" style="font-size: 15px !important;">Recursos en línea IESS</a>
+              </li>
+              <li>
+                <a href="#" style="font-size: 15px !important;">Recursos en línea MRL</a>
+              </li>
+              <li>
+                <a href="#" style="font-size: 15px !important;">Recursos en línea SUPERCIAS</a>
+              </li>
+              <li>
+                <a href="#" style="font-size: 15px !important;">Recursos en línea MUNICIPIO</a>
+              </li>
+            </ul>
           </div>
 
         </div>
+        <div class="col-md-1" style="padding: 0px !important; margin: 0px !important;"></div>
+        <div class="col-md-4"
+          style="background-color: rgb(241, 241, 241); padding: 25px; border-radius: 0.45rem !important; border: 1px solid #13683b !important;">
+          <div>
+            <span style="font-size: 17px;"><b>Nuestro Servicio</b></span>
+            <div style="background-color: rgb(14, 71, 41); width: 45px; height: 4px;"></div><br>
+            <p style="text-align: justify;">
+              Todo profesionales contables, que laboran de forma externa, o en relación de dependencia; puede aprovechar
+              de los recursos en línea, convirtiéndolos en su aliado al momento de cumplir con los diversos retos de la
+              profesión.
+            </p>
+
+            <span style="font-size: 17px;"><b>Contáctenos</b></span>
+            <div style="background-color: rgb(14, 71, 41); width: 45px; height: 4px;"></div><br>
+
+            <span><b>Dirección</b></span><br>
+            <p style="text-align: justify;"><a href="#direccion">Jorge Washington E4-59 y Amazonas
+                Edif.Rocafuerte,
+                Of. 5, sector C.C.Espiral.</a></p>
+            <hr>
+            <span><b>Teléfonos</b></span><br>
+
+            <a href="tel:+022500610">022500610,</a>
+            <a href="tel:+0997607812">0997607812</a>
+            <hr>
+
+            <span><b>Correo Electrónico</b></span><br>
+            <a href="mailto:info@adcontur.com">info@adcontur.com</a>
+          </div>
+
+        </div>
+
       </div>
     </div>
   </section>

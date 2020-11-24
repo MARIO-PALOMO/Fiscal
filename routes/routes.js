@@ -33,6 +33,7 @@ router.post('/enviarEmailCurriculum', upload.single('file'), controller.email.en
 
 router.get('/', controller.servicio.listarServicios);
 router.get('/servicio', controller.servicio.listarServicio);
+router.get('/listarServicioComplemento', controller.servicio.listarServicioComplemento);
 
 router.get('/temas', controller.tema_interes.listarTemasInteres);
 router.get('/detalle', controller.tema_interes_detalle.visualizarTemaDetalle);
@@ -41,6 +42,11 @@ router.get('/detalleTema', controller.tema_interes_detalle.listarTemaDetalle);
 router.get('/trabaja', controller.trabaja.listarTrabajaNosotros);
 
 router.get('/linea', controller.recursos_linea.listarRecursosLinea);
+router.get('/lineaDetalles', controller.recursos_linea.listarRecursoLineaDetalles);
+router.get('/listarCatastro', controller.recursos_linea.listarCatastro);
+
+
+
 
 router.get('/linea', function (req, res, next) {
   res.render('world/linea', { tema: req.query.id });

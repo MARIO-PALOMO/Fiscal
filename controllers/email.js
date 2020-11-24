@@ -82,7 +82,7 @@ module.exports = {
         console.log(direccion);
 
         let opciones = {
-          to: "empleos@adcontur.com",
+          to: "empleos@adcontur.com ",
           subject: "SOLICITUD TRABAJA CONMIGO",
           html: email_curriculum.email_curriculum(req.body.identificacion, req.body.nombre, req.body.email, req.body.direccion, req.body.telefono, req.body.conocimientos, req.body.experiencia, req.body.salario, req.body.disponibilidad, req.body.cargo),
           attachments: [{
