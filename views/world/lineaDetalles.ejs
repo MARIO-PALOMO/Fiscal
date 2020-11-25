@@ -112,20 +112,51 @@
             <hr>
 
             <div>
+
               <p>
-                <b>Actividad Económica</b><br>
-                <span id="ACTIVIDAD_ECONOMICA"></span>
+                <b>Razón Social</b><br>
+                <span id="RAZON_SOCIAL"></span>
               </p>
 
               <p>
-                <b>Calle</b><br>
-                <span id="CALLE"></span>
+                <b>Tipo de Contribuyente</b><br>
+                <span id="TIPO_CONTRIBUYENTE"></span>
               </p>
+
+              <p>
+                <b>Fecha Inicio RUC</b><br>
+                <span id="FECHA_INICIO_ACTIVIDADES"></span>
+              </p>
+
+              <p>
+                <b>Categoría Obligado</b><br>
+                <span id="OBLIGADO"></span>
+              </p>                      
 
               <p>
                 <b>Clase Contribuyente</b><br>
                 <span id="CLASE_CONTRIBUYENTE"></span>
               </p>
+
+              <p>
+                <b>Actividad Principal</b><br>
+                <span id="ACTIVIDAD_ECONOMICA"></span>
+              </p>
+              
+              <p>
+                <b>Nombre Comercial</b><br>
+                <span id="MICROEMPR"></span>
+              </p>  
+            
+              <p>
+                <b>Dirección RUC</b><br>
+                <span id="INTERSECCION"></span>&nbsp;<span id="CALLE"></span>&nbsp;<span id="DESCRIPCION_PROVINCIA"></span>&nbsp;<span id="NUMERO"></span>
+              </p> 
+
+            
+
+              
+              
             </div>
           </div>
           <div id="detalleRecursoLinea2">
@@ -286,9 +317,18 @@
           type: 'GET',
           success: function (res) {
             var datos = res;
-            $("#ACTIVIDAD_ECONOMICA").html(datos.ACTIVIDAD_ECONOMICA);
+            $("#NOMBRE_COMERCIAL").html(datos.NOMBRE_COMERCIAL);
+            $("#INTERSECCION").html(datos.INTERSECCION);           
             $("#CALLE").html(datos.CALLE);
+            $("#DESCRIPCION_PROVINCIA").html(datos.DESCRIPCION_PROVINCIA);
+            $("#NUMERO").html(datos.NUMERO);
             $("#CLASE_CONTRIBUYENTE").html(datos.CLASE_CONTRIBUYENTE);
+            $("#ACTIVIDAD_ECONOMICA").html(datos.ACTIVIDAD_ECONOMICA);
+            $("#RAZON_SOCIAL").html(datos.RAZON_SOCIAL);
+            $("#TIPO_CONTRIBUYENTE").html(datos.TIPO_CONTRIBUYENTE);
+            $("#FECHA_INICIO_ACTIVIDADES").html(datos.FECHA_INICIO_ACTIVIDADES);
+            $("#OBLIGADO").html(datos.OBLIGADO);
+
 
             /* --- DEVUELVE LA TRAMA ---
 CODIGO_CIIU: "L682002"
@@ -307,7 +347,7 @@ NOMBRE_FANTASIA_COMERCIAL: ""
 NUMERO: "515"
 NUMERO_ESTABLECIMIENTO: "1"
 NUMERO_RUC: "1708108657001"
-OBLIGADO: "N"
+OBLIGADO: "N"---
 RAZON_SOCIAL: "TUFIÑO TUFIÑO CECIBEL DEL CARMEN"
 TIPO_CONTRIBUYENTE: "PERSONAS NATURALES"*/
             console.log(res);
