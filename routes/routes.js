@@ -11,7 +11,7 @@ var storage = new FTPStorage({
     host: 'adcontur.com',
     secure: false,
     user: 'admin@adcontur.com',
-    password: 'O9Fn=N5BRYZ*',
+    password: 'Of%SNLkJ8H~7',
     port: 21
   },
   destination: function (req, file, options, callback) {

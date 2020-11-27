@@ -111,7 +111,7 @@
 
             <hr>
 
-            <div>
+            <div  style="background-color: #13683b; color: #ffffff; border-radius: 5px; padding: 20px; font-size: 19px;">
 
               <p>
                 <b>Razón Social</b><br>
@@ -131,7 +131,12 @@
               <p>
                 <b>Categoría Obligado</b><br>
                 <span id="OBLIGADO"></span>
-              </p>                      
+              </p>   
+
+              </div>   
+              <br>           
+              
+              <div style="background-color: #13683b; color: #ffffff; border-radius: 5px; padding: 20px; font-size: 19px;">
 
               <p>
                 <b>Clase Contribuyente</b><br>
@@ -151,11 +156,7 @@
               <p>
                 <b>Dirección RUC</b><br>
                 <span id="INTERSECCION"></span>&nbsp;<span id="CALLE"></span>&nbsp;<span id="DESCRIPCION_PROVINCIA"></span>&nbsp;<span id="NUMERO"></span>
-              </p> 
-
-            
-
-              
+              </p>     
               
             </div>
           </div>
@@ -328,6 +329,7 @@
             $("#TIPO_CONTRIBUYENTE").html(datos.TIPO_CONTRIBUYENTE);
             $("#FECHA_INICIO_ACTIVIDADES").html(datos.FECHA_INICIO_ACTIVIDADES);
             $("#OBLIGADO").html(datos.OBLIGADO);
+            
 
 
             /* --- DEVUELVE LA TRAMA ---
