@@ -43,7 +43,12 @@ router.get('/trabaja', controller.trabaja.listarTrabajaNosotros);
 
 router.get('/linea', controller.recursos_linea.listarRecursosLinea);
 router.get('/lineaDetalles', controller.recursos_linea.listarRecursoLineaDetalles);
-router.get('/listarCatastro', controller.recursos_linea.listarCatastro);
+router.get('/listarDatosRuc', controller.recursos_linea.listarDatosRuc);
+router.get('/listarDatosMicroempresa', controller.recursos_linea.listarDatosMicroempresa);
+router.get('/listarDatosEspecial', controller.recursos_linea.listarDatosEspecial);
+router.get('/listarDatosFantasma', controller.recursos_linea.listarDatosFantasma);
+router.get('/listarDatosAgenteRetencion', controller.recursos_linea.listarDatosAgenteRetencion);
+
 
 
 

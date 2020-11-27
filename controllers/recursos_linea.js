@@ -38,11 +38,83 @@ module.exports = {
     });
   },
 
-  listarCatastro: function (req, res, next) {
+  listarDatosRuc: function (req, res, next) {
 
     var options = {
       method: 'GET',
       uri: "http://144.91.73.120/ruc/getRuc.php?id=" + req.query.ruc,
+      json: true
+    };
+
+    request(options)
+      .then(function (data) {
+        res.status(200).send(data);
+      })
+      .catch(function (err) {
+        res.status(500).send(err);
+      });
+
+  },
+
+  listarDatosMicroempresa: function (req, res, next) {
+
+    var options = {
+      method: 'GET',
+      uri: "http://144.91.73.120/excel_formulas/getMicroempresa.php?id=" + req.query.ruc,
+      json: true
+    };
+
+    request(options)
+      .then(function (data) {
+        res.status(200).send(data);
+      })
+      .catch(function (err) {
+        res.status(500).send(err);
+      });
+
+  },
+
+  listarDatosEspecial: function (req, res, next) {
+
+    var options = {
+      method: 'GET',
+      uri: "http://144.91.73.120/excel_formulas/getEspeciales.php?id=" + req.query.ruc,
+      json: true
+    };
+
+    request(options)
+      .then(function (data) {
+        res.status(200).send(data);
+      })
+      .catch(function (err) {
+        res.status(500).send(err);
+      });
+
+  },
+
+  listarDatosFantasma: function (req, res, next) {
+
+    var options = {
+      method: 'GET',
+      uri: "http://144.91.73.120/excel_formulas/getFantasma.php?id=" + req.query.ruc,
+      json: true
+    };
+
+    request(options)
+      .then(function (data) {
+        res.status(200).send(data);
+      })
+      .catch(function (err) {
+        res.status(500).send(err);
+      });
+
+  },
+
+  listarDatosAgenteRetencion: function (req, res, next) {
+
+    var options = {
+      method: 'GET',
+      uri: "http://144.91.73.120/excel_formulas/getAgente.php?id=" + req.query.ruc,
       json: true
     };
 
