@@ -1,5 +1,5 @@
 
-function email_curriculum(identificacion, nombre, email, direccion, telefono, conocimientos, experiencia, salario, disponibilidad, cargo) {
+function email_curriculum(identificacion, nombre, email, direccion, telefono, conocimientos, experiencia, salario, disponibilidad, cargo, archivo) {
     return `<!DOCTYPE html
     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -169,7 +169,7 @@ function email_curriculum(identificacion, nombre, email, direccion, telefono, co
                                                 </td>
                                                 <td
                                                     style="width: 50% !important;padding-top:5px;padding-bottom:5px;padding-right:10px;padding-left:10px;">
-                                                   El archivo se encuentra adjunto en el correo electrónico
+                                                    <a href="`+ archivo + `">Abrir Archivo</a>
                                                 </td>
                                             </tr>
                                         </table>
