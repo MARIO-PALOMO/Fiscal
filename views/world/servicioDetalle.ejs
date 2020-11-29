@@ -18,11 +18,31 @@
       width: 1em;
       margin-left: -1em;
     }
+
+    .arriba {
+      padding: 10px;
+      background-color: #f7f7f7;
+      text-align: center;
+      position: -webkit-sticky !important;
+      position: sticky !important;
+      top: 100px !important;
+      z-index: 100 !important;
+    }
+
+    @media only screen and (max-width: 994px) {
+      .arriba {
+        padding: 10px;
+        background-color: #f7f7f7;
+        text-align: center;
+        position: block !important;
+        top: 100px !important;
+        z-index: 0 !important;
+      }
+    }
   </style>
 
 
-  <section
-    style="padding: 10px; background-color: #f7f7f7; text-align: center; position: -webkit-sticky !important; position: sticky !important; top: 100px !important; z-index: 100 !important;">
+  <section class="arriba">
     <div>
       <table style="width: 100%;">
         <tr>

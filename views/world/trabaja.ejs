@@ -23,7 +23,8 @@
         <div class="col-md-12">
           <div class="container">
             <div class="row block-9 justify-content-center mb-5">
-              <div class="col-md-10 mb-md-5"  style="padding: 25px; border: 2px solid #13683b !important; border-radius: 0.45rem !important; background-image: url('images/fondoServicios.jpg');background-size: cover; color: #000000 !important;">
+              <div class="col-md-10 mb-md-5"
+                style="padding: 25px; border: 2px solid #13683b !important; border-radius: 0.45rem !important; background-image: url('images/fondoServicios.jpg');background-size: cover; color: #000000 !important;">
                 <form id="fmrCurriculum" enctype="multipart/form-data" class="border p-5 contact-form">
                   <div class="row">
                     <div class="col-md-12">
@@ -33,7 +34,13 @@
                     </div>
                     <div class="col-md-12">
                       <div class="form-group">
-                        <input type="text" class="form-control" placeholder="N° Identificación" name="identificacion" required>
+                        <span style="color: #13683b;">* Todos los campos son obligatorios</span>
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <input type="text" class="form-control" placeholder="N° Identificación" name="identificacion"
+                          required>
                       </div>
                     </div>
                     <div class="col-md-12">
@@ -209,41 +216,79 @@
 
     $("#btnEnviar").click(function () {
       event.preventDefault();
+      
+      if ($("input[name*='identificacion']").val() == "") {
+        Swal.fire({
+          icon: 'warning',
+          title: 'Validación',
+          text: 'Ingresar el numero de identificación.'
+        });
+      } else if ($("input[name*='nombre']").val() == "") {
+        Swal.fire({
+          icon: 'warning',
+          title: 'Validación',
+          text: 'Ingresar nombre.'
+        });
+      } else if ($("input[name*='email']").val() == "") {
+        Swal.fire({
+          icon: 'warning',
+          title: 'Validación',
+          text: 'Ingresar Email.'
+        });
+      } else if ($("input[name*='direccion']").val() == "") {
+        Swal.fire({
+          icon: 'warning',
+          title: 'Validación',
+          text: 'Ingresar Dirección.'
+        });
+      } else if ($("input[name*='telefono']").val() == "") {
+        Swal.fire({
+          icon: 'warning',
+          title: 'Validación',
+          text: 'Ingresar Teléfono.'
+        });
+      } else if ($("input[name*='salario']").val() == "") {
+        Swal.fire({
+          icon: 'warning',
+          title: 'Validación',
+          text: 'Ingresar Salario.'
+        });
+      } else {
+        var form = $('#fmrCurriculum')[0];
+        var data = new FormData(form);
 
-      var form = $('#fmrCurriculum')[0];
-      var data = new FormData(form);
+        $("#loader").addClass("loading");
 
-      $("#loader").addClass("loading");
+        $.ajax({
+          type: 'POST',
+          enctype: 'multipart/form-data',
+          url: '/enviarEmailCurriculum',
+          data: data,
+          processData: false,
+          contentType: false,
+          cache: false,
+          success: function (res) {
 
-      $.ajax({
-        type: 'POST',
-        enctype: 'multipart/form-data',
-        url: '/enviarEmailCurriculum',
-        data: data,
-        processData: false,
-        contentType: false,
-        cache: false,
-        success: function (res) {
+            $("#loader").removeClass("loading").addClass("noloading");
 
-          $("#loader").removeClass("loading").addClass("noloading");
+            Swal.fire({
+              icon: 'success',
+              title: 'Éxito',
+              text: 'Se envió la solicitud de empleo.'
+            });
 
-          Swal.fire({
-            icon: 'success',
-            title: 'Éxito',
-            text: 'Se envió la solicitud de empleo.'
-          });
+          }, error: function (xhr, status) {
+            $("#loader").removeClass("loading").addClass("noloading");
 
-        }, error: function (xhr, status) {
-          $("#loader").removeClass("loading").addClass("noloading");
+            Swal.fire({
+              icon: 'error',
+              title: 'Oops...',
+              text: 'Ocurrio un problema, intente nuevamente mas tarde.'
+            });
 
-          Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: 'Ocurrio un problema, intente nuevamente mas tarde.'
-          });
-
-        }
-      });
+          }
+        });
+      }
 
     });
 
