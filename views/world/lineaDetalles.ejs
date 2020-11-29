@@ -110,81 +110,55 @@
             <button type="button" class="btn btn-primary py-3 px-5" id="btnBuscarRuc">Buscar</button>
 
             <hr>
-            
-            <div id="datosRuc">
-              <style>
-                table {
-                  border: 2px solid #333 !important;
-                }
-              </style>
-              <div>
-                <table class="table table-bordered">
-                  <tbody style="font-size: 18px !important;">
-                    <tr>
-                      <td><b style="color: #13683b;">Microempresa</b></td>
-                      <td><span id="MICROEMPRESA"></span></td>
-                    </tr>
-                    <tr>
-                      <td><b style="color: #13683b;">Contribuyente Especial</b></td>
-                      <td><span id="ESPECIAL"></span></td>
-                    </tr>
-                    <tr>
-                      <td><b style="color: #13683b;">Empresa Fantasma</b></td>
-                      <td><span id="FANTASMA"></span></td>
-                    </tr>
-                    <tr>
-                      <td><b style="color: #13683b;">Agente Retencion</b></td>
-                      <td><span id="RETENCION"></span></td>
-                    </tr>
-                    <tr>
-                      <td colspan="2"></td>
-                    </tr>
-                    <tr>
-                      <td><b style="color: #13683b;">Razón Social</b></td>
-                      <td><span id="RAZON_SOCIAL"></span></td>
-                    </tr>
-                    <tr>
-                      <td><b style="color: #13683b;">Tipo de Contribuyente</b></td>
-                      <td><span id="TIPO_CONTRIBUYENTE"></span></td>
-                    </tr>
-                    <tr>
-                      <td><b style="color: #13683b;">Fecha Inicio RUC</b></td>
-                      <td><span id="FECHA_INICIO_ACTIVIDADES"></span></td>
-                    </tr>
-                    <tr>
-                      <td><b style="color: #13683b;">Categoría Obligado</b></td>
-                      <td><span id="OBLIGADO"></span></td>
-                    </tr>
-                    <tr>
-                      <td colspan="2"></td>
-                    </tr>
-                    <tr>
-                      <td><b style="color: #13683b;">Clase Contribuyente</b></td>
-                      <td><span id="CLASE_CONTRIBUYENTE"></span></td>
-                    </tr>
-                    <tr>
-                      <td><b style="color: #13683b;">Actividad Principal</b></td>
-                      <td><span id="ACTIVIDAD_ECONOMICA"></span></td>
-                    </tr>
-                    <tr>
-                      <td><b style="color: #13683b;">Nombre Comercial</b></td>
-                      <td><span id="MICROEMPR"></span></td>
-                    </tr>
-                    <tr>
-                      <td><b style="color: #13683b;">Dirección RUC</b></td>
-                      <td>
-                        <span id="INTERSECCION"></span>&nbsp;<span id="CALLE"></span>&nbsp;<span
-                          id="DESCRIPCION_PROVINCIA"></span>&nbsp;<span id="NUMERO"></span>
-                        <br>
-                        <span id="INTERSECCION"></span>&nbsp;<span id="CALLE"></span>&nbsp;<span
-                          id="DESCRIPCION_PROVINCIA"></span>&nbsp;<span id="NUMERO"></span>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
 
+            <div  style="background-color: #13683b; color: #ffffff; border-radius: 5px; padding: 20px; font-size: 19px;">
+
+              <p>
+                <b>Razón Social</b><br>
+                <span id="RAZON_SOCIAL"></span>
+              </p>
+
+              <p>
+                <b>Tipo de Contribuyente</b><br>
+                <span id="TIPO_CONTRIBUYENTE"></span>
+              </p>
+
+              <p>
+                <b>Fecha Inicio RUC</b><br>
+                <span id="FECHA_INICIO_ACTIVIDADES"></span>
+              </p>
+
+              <p>
+                <b>Categoría Obligado</b><br>
+                <span id="OBLIGADO"></span>
+              </p>   
+
+              </div>   
+              <br>           
+              
+              <div style="background-color: #13683b; color: #ffffff; border-radius: 5px; padding: 20px; font-size: 19px;">
+
+              <p>
+                <b>Clase Contribuyente</b><br>
+                <span id="CLASE_CONTRIBUYENTE"></span>
+              </p>
+
+              <p>
+                <b>Actividad Principal</b><br>
+                <span id="ACTIVIDAD_ECONOMICA"></span>
+              </p>
+              
+              <p>
+                <b>Nombre Comercial</b><br>
+                <span id="MICROEMPR"></span>
+              </p>  
+            
+              <p>
+                <b>Dirección RUC</b><br>
+                <span id="INTERSECCION"></span>&nbsp;<span id="CALLE"></span>&nbsp;<span id="DESCRIPCION_PROVINCIA"></span>&nbsp;<span id="NUMERO"></span>
+              </p>     
+              
+            </div>
           </div>
           <div id="detalleRecursoLinea2">
             <img src="images/contruccion.png" style="width: 100% !important;">
@@ -280,7 +254,7 @@
     </div>
   </section>
 
-  <div id="loader" class="">&#8230;</div>
+
   <% include ../world/footer/footer %>
 
   <% include ../world/footer/links %>
@@ -290,8 +264,6 @@
   <script>
     $(document).ready(function () {
 
-
-      $("#datosRuc").css("display", "none");
 
       listarRecursoLinea();
 
@@ -334,21 +306,20 @@
       }
 
       $("#btnBuscarRuc").click(function () {
-        listarDatosRuc();
+        buscarRuc();
       });
 
-      function listarDatosRuc() {
+      function buscarRuc() {
         var ruc = $("#txtRuc").val();
+        //var ruc = "1708108657001";
 
-        $("#loader").addClass("loading");
         $.ajax({
-          url: '/listarDatosRuc?ruc=' + ruc,
+          url: '/listarCatastro?ruc=' + ruc,
           type: 'GET',
           success: function (res) {
-            $("#loader").removeClass("loading").addClass("noloading");
             var datos = res;
             $("#NOMBRE_COMERCIAL").html(datos.NOMBRE_COMERCIAL);
-            $("#INTERSECCION").html(datos.INTERSECCION);
+            $("#INTERSECCION").html(datos.INTERSECCION);           
             $("#CALLE").html(datos.CALLE);
             $("#DESCRIPCION_PROVINCIA").html(datos.DESCRIPCION_PROVINCIA);
             $("#NUMERO").html(datos.NUMERO);
@@ -358,94 +329,35 @@
             $("#TIPO_CONTRIBUYENTE").html(datos.TIPO_CONTRIBUYENTE);
             $("#FECHA_INICIO_ACTIVIDADES").html(datos.FECHA_INICIO_ACTIVIDADES);
             $("#OBLIGADO").html(datos.OBLIGADO);
-            listarDatosMicroempresa();
+            
+
+
+            /* --- DEVUELVE LA TRAMA ---
+CODIGO_CIIU: "L682002"
+DESCRIPCION_CANTON: "QUITO"
+DESCRIPCION_PARROQUIA: "LLANO CHICO"
+DESCRIPCION_PROVINCIA: "PICHINCHA"
+ESTADO_CONTRIBUYENTE: "ACTIVO"
+ESTADO_ESTABLECIMIENTO: "ABI"
+FECHA_ACTUALIZACION: "08/06/2018"
+FECHA_INICIO_ACTIVIDADES: "10/12/2003"
+FECHA_REINICIO_ACTIVIDADES: "08/12/2006"
+FECHA_SUSPENSION_DEFINITIVA: ""
+INTERSECCION: "VICTOR CARRILLO"
+NOMBRE_COMERCIAL: ""
+NOMBRE_FANTASIA_COMERCIAL: ""
+NUMERO: "515"
+NUMERO_ESTABLECIMIENTO: "1"
+NUMERO_RUC: "1708108657001"
+OBLIGADO: "N"---
+RAZON_SOCIAL: "TUFIÑO TUFIÑO CECIBEL DEL CARMEN"
+TIPO_CONTRIBUYENTE: "PERSONAS NATURALES"*/
             console.log(res);
           }, error: function (xhr, status) {
-            $("#loader").removeClass("loading").addClass("noloading");
             alert('Disculpe, existió un problema');
           }
         });
       }
-
-
-      function listarDatosMicroempresa() {
-        var ruc = $("#txtRuc").val();
-        $("#loader").addClass("loading");
-        $.ajax({
-          url: '/listarDatosMicroempresa?ruc=' + ruc,
-          type: 'GET',
-          success: function (res) {
-            $("#loader").removeClass("loading").addClass("noloading");
-            var datos = res;
-            $("#MICROEMPRESA").html(datos.microempresa);
-            listarDatosEspecial();
-            console.log(res);
-          }, error: function (xhr, status) {
-            $("#loader").removeClass("loading").addClass("noloading");
-            alert('Disculpe, existió un problema');
-          }
-        });
-      }
-
-      function listarDatosEspecial() {
-        var ruc = $("#txtRuc").val();
-        $("#loader").addClass("loading");
-        $.ajax({
-          url: '/listarDatosEspecial?ruc=' + ruc,
-          type: 'GET',
-          success: function (res) {
-            $("#loader").removeClass("loading").addClass("noloading");
-            var datos = res;
-            $("#ESPECIAL").html(datos.especiales);
-            listarDatosFantasma();
-            console.log(res);
-          }, error: function (xhr, status) {
-            $("#loader").removeClass("loading").addClass("noloading");
-            alert('Disculpe, existió un problema');
-          }
-        });
-      }
-
-      function listarDatosFantasma() {
-        var ruc = $("#txtRuc").val();
-        $("#loader").addClass("loading");
-        $.ajax({
-          url: '/listarDatosFantasma?ruc=' + ruc,
-          type: 'GET',
-          success: function (res) {
-            $("#loader").removeClass("loading").addClass("noloading");
-            var datos = res;
-            $("#FANTASMA").html(datos.fantasma);
-            listarDatosAgenteRetencion();
-            console.log(res);
-          }, error: function (xhr, status) {
-            $("#loader").removeClass("loading").addClass("noloading");
-            alert('Disculpe, existió un problema');
-          }
-        });
-      }
-
-      function listarDatosAgenteRetencion() {
-        var ruc = $("#txtRuc").val();
-        $("#loader").addClass("loading");
-        $.ajax({
-          url: '/listarDatosAgenteRetencion?ruc=' + ruc,
-          type: 'GET',
-          success: function (res) {
-            $("#loader").removeClass("loading").addClass("noloading");
-            $("#datosRuc").css("display", "block");
-            var datos = res;
-            $("#RETENCION").html(datos.agentes);
-
-            console.log(res);
-          }, error: function (xhr, status) {
-            $("#loader").removeClass("loading").addClass("noloading");
-            alert('Disculpe, existió un problema');
-          }
-        });
-      }
-
-
 
       function parametroURL(_par) {
         var _p = null;
